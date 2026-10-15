@@ -1,0 +1,24 @@
+Paleta Modo Claro ☀️
+
+Fondo Principal: "#F8FAFC"
+
+Superficie (Tarjetas/Formularios): "#FFFFFF"
+
+Texto Principal: "#0F172A"
+
+Texto Secundario/Filtros: "#64748B"
+
+Bordes / Líneas de Tabla: "#E2E8F0"
+
+
+Paleta Modo Oscuro 🌙
+
+Fondo Principal: "#0F172A"
+
+Superficie (Tarjetas/Formularios): "#1E293B"
+
+Texto Principal: "#F8FAFC"
+
+Texto Secundario/Filtros: "#94A3B8"
+
+Bordes / Líneas de Tabla: "#334155"
