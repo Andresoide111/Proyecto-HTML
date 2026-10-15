@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 50" width="210" height="50">
+  <defs>
+    <linearGradient id="nexoraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#bfff00" />
+    </linearGradient>
+  </defs>
+  <path d="M10 40 L10 10 L20 10 L35 30 L35 10 L45 10 L45 40 L35 40 L20 20 L20 40 Z" fill="url(#nexoraGrad)"/>
+  <circle cx="48" cy="12" r="3" fill="#10B981" />
+  <!-- El texto lo dejamos gris oscuro por defecto -->
+  <text x="60" y="36" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#0F172A" letter-spacing="1">NEXORA</text>
+</svg>
+
