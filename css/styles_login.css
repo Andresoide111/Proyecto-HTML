@@ -1,0 +1,203 @@
+/* --- VARIABLES DE COLOR --- */
+:root {
+    /* Modo Claro */
+    --bg-color: #FFFFFF;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --border-color: #E2E8F0;
+    --input-bg: #FFFFFF;
+    --btn-bg: #bfff00;
+    --btn-text: #000000;
+}
+
+/* Modo Oscuro */
+body.modo_oscuro {
+    /*  */
+    --bg-color: #0F172A;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: #334155;
+    --input-bg: #1E293B;
+    --btn-bg: #bfff00;
+    --btn-text: #000000;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+/* --- BOTÓN CAMBIAR MODO --- */
+.cambiar_modo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tamaños de los iconos */
+.cambiar_modo img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Por defecto en Modo Claro/
+.cambiar_modo .sol {
+    display: none;
+}
+.cambiar_modo .luna {
+    display: block;
+}
+
+/* Cuando se active el Modo Oscuro: mostramos el sol, ocultamos la luna */
+body.dark-mode .cambiar_modo .luna {
+    display: none;
+}
+body.dark-mode .cambiar_modo .sol {
+    display: block;
+}
+
+
+/* --- CONTENEDOR PRINCIPAL (LOGIN) --- */
+.cuerpo_login {
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+    text-align: center;
+}
+
+.logo-nexora {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.cuerpo_login h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: var(--text-primary);
+}
+
+
+/* --- FORMULARIO E INPUTS --- */
+.form_login {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.form label, 
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.entradas_form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.entradas_form input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.entradas_form input:focus {
+    border-color: var(--btn-bg);
+}
+
+.input-icon {
+    position: absolute;
+    right: 14px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+
+/* --- enlace olvide contra --- */
+.form_enlace {
+    text-align: right;
+    margin-top: -6px;
+}
+
+.form_enlace .password {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.form_enlace .password:hover {
+    text-decoration: underline;
+}
+
+
+/* ---  iniciar --- */
+.btn_iniciar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: opacity 0.2s ease;
+}
+
+.btn_iniciar:hover {
+    opacity: 0.9;
+}
+
+
+/* --- Txt_regis --- */
+.txt {
+    margin-top: 24px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.txt a {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.txt a:hover {
+    text-decoration: underline;
+}
