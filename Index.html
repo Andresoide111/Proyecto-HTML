@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechStore | Catalogo tecnologico</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA</title>
+    <style>
+       /*Aui va ir todo el dieño*/
+    </style>
 </head>
+<form id="form1" runat="server">
 
+    <header class="topbar">
+        <a class="brand" href="Default.aspx">
+             TechStore
+            <small>Tecnologia que te impulsa</small>
+        </a>
+
+        <div class="search">
+            <asp:TextBox ID="txtBuscar" runat="server"
+                placeholder="Buscar productos (laptop, monitor, etc.)..." />
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar"
+                CssClass="btn" OnClick="btnBuscar_Click" />
+        </div>
+
+        <button type="button" class="btn btn-outline"
+            onclick="cambiarTema()">(unsol) / (una luna) Tema</button>
+    </header>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <nav>
+                <a class="nav active" href="Default.aspx"> &nbsp; Inicio</a>
+                <a class="nav" href="#catalogo"> &nbsp; Catalogo</a>
+                <a class="nav" href="#catalogo"> &nbsp; Mi cuenta</a>
+                <a class="nav" href="#catalogo"> &nbsp; Carrito</a>
+                <a class="nav" href="#contacto"> &nbsp; Contacto</a>
+            </nav>
+            <div class="side-note">
+                <h3>Rendimiento para tus ideas</h3>
+                <p>Laptops, monitores y accesorios para llevar tu experiencia al siguiente nivel.</p>
+                <a href="#catalogo" class="btn">Ver productos</a>
+            </div>
+        </aside>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <span class="tag">TECNOLOGIA PARA TU DIA A DIA</span>
+                    <h1>Catalogo de Productos</h1>
+                    <p>Encuentra los mejores equipos y accesorios de tecnologia con calidad y buen precio.</p>
+                </div>
+            </section>
+
+            <section class="categories">
+                <a class="category" href="#catalogo">
+                    <strong>(una laptop) Laptops</strong>
+                    <span>Rendimiento y portabilidad</span>
+                </a>
+                <a class="category" href="#catalogo">
+                    <strong>(un monitor) Monitores</strong>
+                    <span>Mejores graficos y detalle</span>
+                </a>
+                <a class="category" href="#catalogo">
+                    <strong>(unos audifonos) Accesorios</strong>
+                    <span>Complementa tu equipo</span>
+                </a>
+                <a class="category" href="#catalogo">
+                    <strong>(un router) Redes</strong>
+                    <span>Conexion sin limites</span>
+                </a>
+
+            
+
+                
+            </section>
 <body>
-    <a href="index.html">
-    <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-    </a>
-    <hr>
+
 </body>
-    
 </html>
