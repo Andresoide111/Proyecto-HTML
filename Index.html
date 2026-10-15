@@ -70,12 +70,47 @@
                 <a class="category" href="#catalogo">
                     <strong>(un router) Redes</strong>
                     <span>Conexion sin limites</span>
-                </a>
-
-            
-
-                
+                </a>        
             </section>
+             <section id="catalogo">
+                <div class="catalog-head">
+                    <h2>Productos destacados</h2>
+                    <span class="muted">Explora nuestro catalogo</span>
+                </div>
+
+               
+
+                <div class="products">
+                    <asp:Repeater ID="rptProductos" runat="server">
+                        <ItemTemplate>
+                            <article class="product">
+                                <img src='<%#: Eval("Imagen") %>'
+                                    loading="lazy" />
+
+                                <span class="tag">("Categoria")</span>
+                                <h3>("Nombre")</h3>
+                                <div class="description">
+                                    ("Descripcion")
+                                </div>
+
+                                <div class="price">
+                                    ("Precio")
+                                </div>
+
+                                <a class="btn"
+                                   >
+                                   Ver ficha tecnica
+                                </a>
+
+                               
+                            </article>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+            </section>
+              <footer id="contacto">
+                © 2026  Nexora | Catalogo de productos tecnologicos
+            </footer>
 <body>
 
 </body>
