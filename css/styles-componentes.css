@@ -1,0 +1,87 @@
+/* Estilos para Header y Footer */
+:root {
+    --bg-superficie: #FFFFFF;
+    --texto-principal: #0F172A;
+    --texto-secundario: #64748B;
+    --borde-linea: #E2E8F0;
+    --primary-accent: #bfff00;
+}
+
+body.dark-mode {
+    --bg-superficie: #1E293B;
+    --texto-principal: #F8FAFC;
+    --texto-secundario: #94A3B8;
+    --borde-linea: #334155;
+}
+
+.nexora-header {
+    background-color: var(--bg-superficie);
+    border-bottom: 1px solid var(--borde-linea);
+    color: var(--texto-principal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img { height: 32px; width: auto; }
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.header-search input {
+    background-color: transparent;
+    border: 1px solid var(--borde-linea);
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    color: var(--texto-principal);
+}
+
+.btn-login { text-decoration: none; color: var(--texto-principal); font-weight: 500; }
+
+.nexora-footer {
+    background-color: var(--bg-superficie);
+    border-top: 1px solid var(--borde-linea);
+    color: var(--texto-principal);
+    padding-top: 2.5rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-col h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul li a { text-decoration: none; color: var(--texto-secundario); font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid var(--borde-linea); text-align: center; padding: 1rem 0; font-size: 0.85rem; color: var(--texto-secundario); }

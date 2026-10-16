@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Nexora</title>
+    <!-- este es un enlace que sirve para conectar recursos externos, es este caso
+     es la fuente, el enlace es de google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_login.css">
+</head>
+<body>
+
+    <!-- boton para cambiar de modo oscuro a claro -->
+    <button class="cambiar_modo" id="modo" type="button">
+        <!-- se le puede asignar dos clase al mismo elemento separados por un espacio, el primero se 
+         puede compartir el segundo es para ser mas especifico "class="iconos luna" -->
+
+         <img src="../assets/img/icono_luna.svg" alt="Modo Oscuro" class="iconos luna">
+         <img src="../assets/img/icono_sol.svg" alt="Modo Claro" class="theme-icon sol">
+    </button>
+
+    <main class="cuerpo_login">
+        <!-- Logo -->
+        <a href="index.html" class="logo-link">
+            <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+        </a>
+
+       
+        <h2>Iniciar Sesión</h2>
+
+        <!-- Formulario -->
+        <form class="form_login">
+            <div class="form">
+                <label for="email">Correo electrónico</label>
+                <div class="entradas_form">
+                    <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                    <span class="input-icon">✉</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <div class="entradas_form">
+                    <input type="password" id="password" placeholder="••••••••" required>
+                    <span class="input-icon">👁</span>
+                </div>
+            </div>
+
+            <div class="form_enlace">
+                <a href="#" class="password">¿Olvidé mi contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn_iniciar">Iniciar Sesión</button>
+        </form>
+
+        
+        <p class="txt">
+            ¿No tienes cuenta? <a href="#">Regístrate</a>
+        </p>
+    </main>
+
+    <script>
+        // se declara una constante, nombre, document... eso toma el elemento que tiene el id "modo"
+        const boton_modo = document.getElementById('modo');
+        //toma el boton, el evento y no esta aplicada la clase dark lo coloca
+        boton_modo.addEventListener('click', () => {
+        document.body.classList.toggle('modo_oscuro');
+        });
+    </script>
+</body>
+</html>
