@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Nexora</title>
     <link rel="stylesheet" href="css/styles_checkout.css">
-    <!-- Fuente recomendada para este estilo limpio -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-fondo">
-    <a href="index.html">
-    <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-    </a>
-    <hr>
 
+    <!-- 1. Contenedor para el Header -->
+    <div id="header-container"></div>
+
+    <!-- 2. Contenido Principal del Checkout -->
     <div class="checkout-container">
         
         <!-- Columna Izquierda: Formulario -->
@@ -31,7 +30,6 @@
                     <textarea id="direccion" rows="3" placeholder="Colonia, calle, casa y referencias" required></textarea>
                 </div>
 
-                <!-- Fila de dos columnas para correo y teléfono -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="correo">CORREO ELECTRÓNICO *</label>
@@ -62,10 +60,8 @@
                 <span class="subtitle">TU COMPRA</span>
                 <h2 class="titulo-resumen">Resumen de orden</h2>
 
-                <!-- Producto -->
                 <div class="producto-item">
                     <div class="producto-img">
-                        <!-- Aquí puedes poner la etiqueta img real -->
                         <div class="img-placeholder"></div>
                     </div>
                     <div class="producto-info">
@@ -77,7 +73,6 @@
 
                 <hr class="divisor">
 
-                <!-- Totales -->
                 <div class="totales-row">
                     <span class="etiqueta">Subtotal</span>
                     <span class="valor">L 0,000.00</span>
@@ -101,6 +96,29 @@
         </div>
 
     </div>
+
+    <!-- 3. Contenedor para el Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Script de inyección para Cargar Header y Footer con live server -->
+    <script>
+        async function cargarComponentes() {
+            try {
+                const resHeader = await fetch('header.html');
+                if (resHeader.ok) {
+                    document.getElementById('header-container').innerHTML = await resHeader.text();
+                }
+                
+                const resFooter = await fetch('footer.html');
+                if (resFooter.ok) {
+                    document.getElementById('footer-container').innerHTML = await resFooter.text();
+                }
+            } catch (e) {
+                console.log("Cargando componentes localmente...", e);
+            }
+        }
+        cargarComponentes();
+    </script>
 
 </body>
 </html>
