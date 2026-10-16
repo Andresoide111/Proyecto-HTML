@@ -43,126 +43,91 @@
         }
     </style>
 </head>
-<body class="bg-fondo">
-
-    <!-- 1. Contenedor para el Header -->
-    <div id="header-container"></div>
-
-    <!-- 2. Contenido Principal del Checkout -->
-    <div class="checkout-container">
-        
-        <!-- Columna Izquierda: Formulario -->
-        <div class="summary-card">
-            <h1 class="titulo-seccion">Información de envío</h1>
-            
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nombre">NOMBRE COMPLETO *</label>
-                    <input type="text" id="nombre" placeholder="Ej. Andrea Martínez" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="direccion">DIRECCIÓN DE ENVÍO *</label>
-                    <textarea id="direccion" rows="3" placeholder="Colonia, calle, casa y referencias" required></textarea>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="correo">CORREO ELECTRÓNICO *</label>
-                        <input type="email" id="correo" placeholder="nombre@correo.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">TELÉFONO *</label>
-                        <input type="tel" id="telefono" placeholder="9999-9999" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="ciudad">CIUDAD *</label>
-                    <select id="ciudad" required>
-                        <option value="" disabled selected>Selecciona tu ciudad</option>
-                        <option value="catacamas">Catacamas</option>
-                        <option value="tegucigalpa">Tegucigalpa</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn-confirmar">CONFIRMAR PEDIDO &rarr;</button>
-            </form>
-        </div>
-
-        <!-- Columna Derecha: Resumen de Orden -->
-        <div class="summary-section">
-            <div class="summary-card">
-                <span class="subtitle">TU COMPRA</span>
-                <h2 class="titulo-resumen">Resumen de orden</h2>
-
-                <div class="producto-item">
-                    <div class="producto-img">
-                        <div class="img-placeholder"></div>
-                    </div>
-                    <div class="producto-info">
-                        <span class="producto-nombre">xxxxxx</span>
-                        <span class="producto-cant">Cant. x</span>
-                    </div>
-                    <span class="producto-precio">L 0,000.00</span>
-                </div>
-
-                <hr class="divisor">
-
-                <div class="totales-row">
-                    <span class="etiqueta">Subtotal</span>
-                    <span class="valor">L 0,000.00</span>
-                </div>
-                <div class="totales-row">
-                    <span class="etiqueta">ISV (15%)</span>
-                    <span class="valor">L 0,000.00</span>
-                </div>
-                <div class="totales-row">
-                    <span class="etiqueta">Envío</span>
-                    <span class="valor texto-verde">GRATIS</span>
-                </div>
-
-                <hr class="divisor">
-
-                <div class="totales-row total-final">
-                    <span class="etiqueta">Total</span>
-                    <span class="valor">L 0,000.00</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- 3. Contenedor para el Footer -->
-    <div id="footer-container"></div>
-
-    <!-- Script para Cargar Componentes y Activar el Modo Oscuro al hacer Clic en la Luna -->
-    <script>
-        async function iniciarPagina() {
-            try {
-                const resHeader = await fetch('header.html');
-                if (resHeader.ok) {
-                    document.getElementById('header-container').innerHTML = await resHeader.text();
-                }
-                
-                const resFooter = await fetch('footer.html');
-                if (resFooter.ok) {
-                    document.getElementById('footer-container').innerHTML = await resFooter.text();
-                }
-
-                // Activador del botón de modo oscuro
-                const botonTema = document.getElementById('theme-toggle');
-                if (botonTema) {
-                    botonTema.addEventListener('click', () => {
-                        document.body.classList.toggle('dark-mode');
-                    });
-                }
-            } catch (e) {
-                console.log("Error cargando componentes:", e);
-            }
-        }
-        iniciarPagina();
-    </script>
-
+<body>
+    <a href="index.html">
+    <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+    </a>
+    <hr>
 </body>
+    <h1>Finalizar Compra</h1>
+    <p>Completa tus datos para procesar tu orden y coordinar el envío de tus productos.</p>
+
+    <form action="#" method="POST">
+
+        <fieldset>
+            <legend>Datos de Facturación y Envío</legend>
+
+            <!-- Nombre Completo -->
+            <div>
+                <label for="nombre">Nombre Completo: <span style="color: #EF4444;">*</span></label><br>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Andres Velasquez">
+            </div><br>
+
+            <!-- Correo Electrónico -->
+            <div>
+                <label for="correo">Correo Electrónico: <span style="color: #EF4444;">*</span></label><br>
+                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+            </div><br>
+
+            <!-- Teléfono -->
+            <div>
+                <label for="telefono">Teléfono Móvil: <span style="color: #EF4444;">*</span></label><br>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 9999-9999">
+            </div><br>
+
+            <!-- Ciudad -->
+            <div>
+                <label for="ciudad">Ciudad: <span style="color: #EF4444;">*</span></label><br>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="" disabled selected>-- Seleccione su Ciudad --</option>
+                    <option value="catacamas">Catacamas</option>
+                    <option value="juticalpa">Juticalpa</option>
+                    <option value="tegucigalpa">Tegucigalpa</option>
+                    <option value="san_pedro_sula">San Pedro Sula</option>
+                    <option value="otra">Otra ciudad...</option>
+                </select>
+            </div><br>
+
+            <!-- Dirección de Envío -->
+            <div>
+                <label for="direccion">Dirección de Envío Exacta: <span style="color: #EF4444;">*</span></label><br>
+                <textarea id="direccion" name="direccion" rows="3" cols="45" required placeholder="Barrio, calle, número de casa y referencias..."></textarea>
+            </div>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Opciones de Entrega</legend>
+
+            <div>
+                <label>Método de entrega preferido: <span style="color: #EF4444;">*</span></label><br>
+                <input type="radio" id="entrega_domicilio" name="metodo_entrega" value="domicilio" required>
+                <label for="entrega_domicilio">Envío a Domicilio</label>
+                
+                <input type="radio" id="entrega_tienda" name="metodo_entrega" value="tienda" required>
+                <label for="entrega_tienda">Recogida en Tienda Física</label>
+            </div><br>
+
+            <div>
+                <label for="notas_orden">Notas para el repartidor (Opcional):</label><br>
+                <textarea id="notas_orden" name="notas_orden" rows="2" cols="45" placeholder="Ej. Dejar en portería o timbre dañado..."></textarea>
+            </div>
+        </fieldset><br>
+
+        <!-- Conservamos tu mapa para darle uso comercial como "Ubicación de la tienda" -->
+        <fieldset>
+            <legend>Ubicación de nuestra tienda principal (Para retirar en tienda)</legend>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4119.315653429654!2d-85.88845179486042!3d14.836417747687413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6c725eeb075131%3A0xd44cb32cf68fdad7!2sUCENM%20-%20Universidad%20Cristiana%20Evang%C3%A9lica%20Nuevo%20Milenio!5e0!3m2!1ses-419!2shn!4v1790967959329!5m2!1ses-419!2shn" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </fieldset><br>
+
+        <div>
+            <!-- Botón de confirmar usando el Verde Éxito de la paleta -->
+            <button type="submit" style="background: #10B981; border: none; font-weight: bold; color:#FFF; padding: 10px 18px; cursor: pointer; border-radius: 4px;">Confirmar Orden</button>
+            
+            <!-- Botón de limpiar usando el Rojo Alerta de la paleta -->
+            <button type="reset" style="background: #EF4444; border: none; font-weight: bold; color: #FFF; padding: 10px 18px; cursor: pointer; border-radius: 4px; margin-left: 10px;">Vaciar Datos</button>
+        </div>
+
+    </form>
 </html>

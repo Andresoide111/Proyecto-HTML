@@ -1,20 +1,461 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Fuente recomendada para este estilo limpio -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechStore | Catalogo tecnologico</title>
+
+    <style>
+        /* ==========================================================================
+           1. REINICIO GLOBAL Y VARIABLES DE ESTILO
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Paleta de colores moderna para tienda tecnológica */
+            --primary-color: #2563eb;       /* Azul principal */
+            --primary-hover: #1d4ed8;       /* Azul para efectos hover */
+            --bg-color: #f8fafc;            /* Fondo gris claro suave */
+            --surface-color: #ffffff;       /* Fondo de tarjetas y header */
+            --text-color: #0f172a;          /* Texto principal sombreado */
+            --text-muted: #64748b;          /* Texto secundario */
+            --border-color: #e2e8f0;        /* Borde sutil */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius: 8px;                  /* Bordes redondeados estándar */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* ==========================================================================
+           2. LOGO SUPERIOR Y SEPARADOR
+           ========================================================================== */
+        .logo-nexora {
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+
+        /* ==========================================================================
+           3. CABECERA Y BARRA DE BÚSQUEDA (.topbar)
+           ========================================================================== */
+        .topbar {
+            background-color: var(--surface-color);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand small {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .search {
+            display: flex;
+            gap: 0.5rem;
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .search input[type="text"] {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            outline: none;
+        }
+
+        .search input[type="text"]:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* Botones generales */
+        .btn {
+            background-color: var(--primary-color);
+            color: #ffffff !important;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-color) !important;
+        }
+
+        .btn-outline:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* ==========================================================================
+           4. DISPOSICIÓN PRINCIPAL (.layout) - SIDEBAR + MAIN
+           ========================================================================== */
+        .layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ==========================================================================
+           5. BARRA LATERAL (.sidebar)
+           ========================================================================== */
+        .sidebar {
+            background-color: var(--surface-color);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            height: fit-content;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar nav .nav {
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--radius);
+            color: var(--text-color);
+        }
+
+        .sidebar nav .nav:hover,
+        .sidebar nav .nav.active {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .side-note {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+        }
+
+        .side-note h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .side-note p {
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        /* ==========================================================================
+           6. SECCIÓN HERO Y CATEGORÍAS
+           ========================================================================== */
+        .hero {
+            background-color: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+        }
+
+        /* Rejilla de Categorías */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category {
+            background-color: var(--surface-color);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .category strong {
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .category span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           7. CATÁLOGO Y TARJETAS DE PRODUCTO (.products)
+           ========================================================================== */
+        .catalog-head {
+            margin-bottom: 1rem;
+        }
+
+        .catalog-head h2 {
+            font-size: 1.35rem;
+        }
+
+        .muted {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .product {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+            background-color: #f8fafc;
+            border-radius: 4px;
+        }
+
+        .product h3 {
+            font-size: 1rem;
+            margin: 0.25rem 0;
+        }
+
+        .product .description {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+
+        .product .price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+        }
+
+        /* ==========================================================================
+           8. PIE DE PÁGINA (FOOTER)
+           ========================================================================== */
+        footer {
+            margin-top: 2rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
 
+
 <body>
+    <!-- Se movió la etiqueta <body> al inicio del contenido visual -->
+    
     <a href="index.html">
-    <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+        <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
     </a>
     <hr>
-</body>
 
+    <form id="form1" runat="server">
+
+        <header class="topbar">
+            <a class="brand" href="Default.aspx">
+                TechStore
+                <small>Tecnologia que te impulsa</small>
+            </a>
+
+            <div class="search">
+                <asp:TextBox ID="txtBuscar" runat="server"
+                    placeholder="Buscar productos (laptop, monitor, etc.)..." />
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar"
+                    CssClass="btn" OnClick="btnBuscar_Click" />
+            </div>
+
+            <button type="button" class="btn btn-outline"
+                onclick="cambiarTema()">(unsol) / (una luna) Tema</button>
+        </header>
+
+        <div class="layout">
+
+            <aside class="sidebar">
+                <nav>
+                    <a class="nav active" href="Default.aspx">&nbsp; Inicio</a>
+                    <a class="nav" href="#catalogo">&nbsp; Catalogo</a>
+                    <a class="nav" href="#catalogo">&nbsp; Mi cuenta</a>
+                    <a class="nav" href="#catalogo">&nbsp; Carrito</a>
+                    <a class="nav" href="#contacto">&nbsp; Contacto</a>
+                </nav>
+                <div class="side-note">
+                    <h3>Rendimiento para tus ideas</h3>
+                    <p>Laptops, monitores y accesorios para llevar tu experiencia al siguiente nivel.</p>
+                    <a href="#catalogo" class="btn">Ver productos</a>
+                </div>
+            </aside>
+
+            <main>
+                <section class="hero">
+                    <div>
+                        <span class="tag">TECNOLOGIA PARA TU DIA A DIA</span>
+                        <h1>Catalogo de Productos</h1>
+                        <p>Encuentra los mejores equipos y accesorios de tecnologia con calidad y buen precio.</p>
+                    </div>
+                </section>
+
+                <section class="categories">
+                    <a class="category" href="#catalogo">
+                        <strong>(una laptop) Laptops</strong>
+                        <span>Rendimiento y portabilidad</span>
+                    </a>
+                    <a class="category" href="#catalogo">
+                        <strong>(un monitor) Monitores</strong>
+                        <span>Mejores graficos y detalle</span>
+                    </a>
+                    <a class="category" href="#catalogo">
+                        <strong>(unos audifonos) Accesorios</strong>
+                        <span>Complementa tu equipo</span>
+                    </a>
+                    <a class="category" href="#catalogo">
+                        <strong>(un router) Redes</strong>
+                        <span>Conexion sin limites</span>
+                    </a>        
+                </section>
+
+                <section id="catalogo">
+                    <div class="catalog-head">
+                        <h2>Productos destacados</h2>
+                        <span class="muted">Explora nuestro catalogo</span>
+                    </div>
+
+                    <div class="products">
+                        <asp:Repeater ID="rptProductos" runat="server">
+                            <ItemTemplate>
+                                <article class="product">
+                                    <img src='<%#: Eval("Imagen") %>' loading="lazy" alt="Producto" />
+
+                                    <span class="tag">("Categoria")</span>
+                                    <h3>("Nombre")</h3>
+                                    <div class="description">
+                                        ("Descripcion")
+                                    </div>
+
+                                    <div class="price">
+                                        ("Precio")
+                                    </div>
+
+                                    <a class="btn" href="#">
+                                        Ver ficha tecnica
+                                    </a>
+                                </article>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </section>
+
+                <footer id="contacto">
+                    © 2026 Nexora | Catalogo de productos tecnologicos
+                </footer>
+            </main>
+        </div>
+    </form>
+</body>
 </html>
