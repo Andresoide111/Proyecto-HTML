@@ -6,11 +6,24 @@
     <title>Checkout - Nexora</title>
     <link rel="stylesheet" href="../css/styles_checkout.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Función para cargar el Header
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Función para cargar el Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </head>
 <body class="bg-fondo">
-    <a href="../index.html">
-    <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-    </a>
+    <div id="header-container"></div>
     <hr>
 
     <div class="checkout-container">
@@ -100,6 +113,7 @@
         </div>
 
     </div>
-
+    
+    <div id="footer-container"></div>
 </body>
 </html>

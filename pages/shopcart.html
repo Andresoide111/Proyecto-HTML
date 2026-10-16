@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXORA - Carrito de Compras</title>
     <link rel="stylesheet" href="../css/styles_shopcart.css">
+    <script>
+        // Función para cargar el Header
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Función para cargar el Footer
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </head>
 
 <body>
-    <a href="../Index.html">
-    <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-    </a>
-    <hr>
+    <div id="header-container"></div>
+    
     <a class="back-link" href="../Index.html">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
             <path d="M19 12H5m0 0 7 7m-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -44,5 +57,6 @@
             </div>
         </section>
     </main>
+    <div id="footer-container"></div>
 </body>
 </html>

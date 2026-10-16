@@ -5,38 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TechStore | Catalogo tecnologico</title>
     <link rel="stylesheet" href="css/styles_index.css" />
+    <script>
+        // Función para cargar el Header
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
 
+        // Función para cargar el Footer
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </head>
 
 
 <body>
-     <!-- enlace en la imagen del logo, para que no sea una imagen estatica
-     al hacer clic en la imagen lleva al inicio -->
-
-    <a href="Index.html">
-        <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-    </a>
-    <hr>
+    <div id="header-container"></div>
 
     <form id="form1" runat="server">
-
-        <header class="topbar">
-            <a class="brand" href="Default.aspx">
-                TechStore
-                <small>Tecnologia que te impulsa</small>
-            </a>
-
-            <div class="search">
-                <asp:TextBox ID="txtBuscar" runat="server"
-                    placeholder="Buscar productos (laptop, monitor, etc.)..." />
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar"
-                    CssClass="btn" OnClick="btnBuscar_Click" />
-            </div>
-
-            <button type="button" class="btn btn-outline"
-                onclick="cambiarTema()">(unsol) / (una luna) Tema</button>
-        </header>
-
         <div class="layout">
 
             <aside class="sidebar">
@@ -119,5 +109,6 @@
             </main>
         </div>
     </form>
+    <div id="footer-container"></div>
 </body>
 </html>
