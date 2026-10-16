@@ -6,6 +6,42 @@
     <title>Checkout - Nexora</title>
     <link rel="stylesheet" href="css/styles_checkout.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos base y variables de Modo Oscuro para el Checkout */
+        body.dark-mode {
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+        }
+        body.dark-mode .summary-card {
+            background-color: #1e293b !important;
+            color: #f8fafc !important;
+            border-color: #334155 !important;
+        }
+        body.dark-mode input, 
+        body.dark-mode textarea, 
+        body.dark-mode select {
+            background-color: #0f172a !important;
+            color: #f8fafc !important;
+            border-color: #334155 !important;
+        }
+        body.dark-mode h1, 
+        body.dark-mode h2, 
+        body.dark-mode label, 
+        body.dark-mode span,
+        body.dark-mode .etiqueta {
+            color: #f8fafc !important;
+        }
+        body.dark-mode header {
+            background-color: #1e293b !important;
+            border-bottom-color: #334155 !important;
+        }
+        body.dark-mode .nav-link {
+            color: #94a3b8 !important;
+        }
+        body.dark-mode #nav-login {
+            color: #94a3b8 !important;
+        }
+    </style>
 </head>
 <body class="bg-fondo">
 
@@ -100,9 +136,9 @@
     <!-- 3. Contenedor para el Footer -->
     <div id="footer-container"></div>
 
-    <!-- Script de inyección para Cargar Header y Footer con live server -->
+    <!-- Script para Cargar Componentes y Activar el Modo Oscuro al hacer Clic en la Luna -->
     <script>
-        async function cargarComponentes() {
+        async function iniciarPagina() {
             try {
                 const resHeader = await fetch('header.html');
                 if (resHeader.ok) {
@@ -113,11 +149,19 @@
                 if (resFooter.ok) {
                     document.getElementById('footer-container').innerHTML = await resFooter.text();
                 }
+
+                // Activador del botón de modo oscuro
+                const botonTema = document.getElementById('theme-toggle');
+                if (botonTema) {
+                    botonTema.addEventListener('click', () => {
+                        document.body.classList.toggle('dark-mode');
+                    });
+                }
             } catch (e) {
-                console.log("Cargando componentes localmente...", e);
+                console.log("Error cargando componentes:", e);
             }
         }
-        cargarComponentes();
+        iniciarPagina();
     </script>
 
 </body>
