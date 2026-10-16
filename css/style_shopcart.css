@@ -1,0 +1,185 @@
+        :root {
+            color-scheme: light;
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
+            color: #101729;
+            background: #f7f9fc;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 320px;
+            min-height: 100vh;
+            margin: 0;
+            padding: 14px 40px 40px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: #60758f;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #101729;
+        }
+
+        .back-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .cart-content {
+            margin-top: 82px;
+        }
+
+        .eyebrow {
+            margin: 0 0 17px;
+            color: #526b89;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.4px;
+            line-height: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(48px, 4.2vw, 72px);
+            font-weight: 700;
+            letter-spacing: -4.5px;
+            line-height: 1.08;
+        }
+
+        .item-count {
+            margin: 14px 0 0;
+            color: #60758f;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .empty-cart {
+            min-height: 480px;
+            margin-top: 51px;
+            border: 1px dashed #d8e1ed;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .empty-cart-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cart-icon {
+            width: 90px;
+            height: 90px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #f0f4f9;
+            color: #101729;
+        }
+
+        .cart-icon svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        h2 {
+            margin: 8px 0 4px;
+            color: #101729;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .empty-message {
+            margin: 0;
+            color: #60758f;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .products-link {
+            min-width: 245px;
+            min-height: 63px;
+            margin-top: 26px;
+            padding: 0 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            border-radius: 4px;
+            background: #b6ff00;
+            color: #101729;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            text-decoration: none;
+            transition: background-color 150ms ease;
+        }
+
+        .products-link:hover {
+            background: #a8ed00;
+        }
+
+        .products-link svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 20px 24px;
+            }
+
+            .cart-content {
+                margin-top: 64px;
+            }
+
+            h1 {
+                font-size: clamp(42px, 12vw, 58px);
+                letter-spacing: -2.8px;
+            }
+
+            .item-count,
+            .empty-message {
+                font-size: 17px;
+            }
+
+            .empty-cart {
+                min-height: 400px;
+                margin-top: 36px;
+                padding: 40px 18px;
+            }
+
+            .cart-icon {
+                width: 76px;
+                height: 76px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
