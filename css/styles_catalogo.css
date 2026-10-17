@@ -1,43 +1,27 @@
 :root {
-    /*  */
-    --primary-color: #0f172a;
-    /* Texto Principal  */
-    --btn-main: #bfff00;
-    /* Botones */
-    --verde-brillante: #a3e635;
-    /*  botón principal */
-    --bg-color: #f8fafc;
-    /* Fondo Principal */
-    --surface-color: #ffffff;
-    /* Tarjetas/formularios */
-    --text-color: #0f172a;
-    /* Texto Principal */
-    --text-muted: #64748b;
-    /* Texto Secundario  */
-    --color-claro: #e2e8f0;
-    /* Bordes  */
+           /*  */
+            --primary-color: #0f172a;       /* Texto Principal  */
+            --btn-main: #bfff00;            /* Botones */
+            --verde-brillante: #a3e635;       /*  botón principal */
+            --bg-color: #f8fafc;            /* Fondo Principal */
+            --surface-color: #ffffff;       /* Tarjetas/formularios */
+            --text-color: #0f172a;          /* Texto Principal */
+            --text-muted: #64748b;          /* Texto Secundario  */
+            --color-claro: #e2e8f0;        /* Bordes  */
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius: 8px;                  /* Bordes redondeados estándar */
+        }
 
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --radius: 8px;
-    /* Bordes redondeados estándar */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.5;
-    padding: 1rem;
-}
-
-/* ---------------------- */
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 1rem;
+        }
+        /* ---------------------- */
 .panel_anuncio {
     background-color: var(--verde-brillante);
     color: var(--text-color);
@@ -48,11 +32,11 @@ body {
 }
 
 /*   alinear en 1 sola fila */
-.encabezado {
+.encabezado{
     background-color: var(--surface-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Separa Logo, Menú e Iconos a los extremos */
+    align-items: center;            /* Centra todo verticalmente */
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
@@ -67,8 +51,7 @@ body {
 /* menú de navegación centrado */
 .nav-principal {
     display: flex;
-    gap: 1.5rem;
-    /* espacio uniforme entre enlaces */
+    gap: 1.5rem; /* espacio uniforme entre enlaces */
 }
 
 .nav-principal a {
@@ -98,6 +81,57 @@ body {
 }
 
 .acciones-usuario .icono:hover {
-    transform: scale(1.1);
-    /* Efecto sutil al pasar el cursor */
+    transform: scale(1.1); /* Efecto sutil al pasar el cursor */
+} 
+
+/* cuerpo categorias de los productos */
+
+.categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+     .producto {
+            background-color: var(--surface-color);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            display: flex;
+            /* indica que los elementos dentro de la tarjeta se acomoda */
+            flex-direction: column; 
+            box-shadow: var(--shadow-sm);
+          
+        }
+        /* Controla el tamaño uniforme de las imágenes dentro de las tarjetas */
+    .producto img {
+         width: 100%;           /* hhace que la imagen ocupe todo el ancho disponible de la tarjeta */
+         height: 160px;        
+         object-fit: cover;     /* recorta la imagen proporcionalmente para que no se deforme */
+     
+}
+        .catalog-head {
+            margin-bottom: 1rem;
+        }
+
+        .catalog-head h2 {
+            font-size: 1.35rem;
+        }
+        /* tarjeta individual del producto con tamaño controlado */
+.product {
+    background-color: var(--surface-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+}
+
+.product img {
+    width: 100%;           /* hace que la imagen ocupe todo el ancho de su tarjeta */
+    height: 180px;         /* fija una altura exacta y ordenada */
+    object-fit: cover;     /* recorta y ajusta la foto para que no se deforme */
+    border-radius: 6px;    /* redondea ligeramente las esquinas superiores */
+    margin-bottom: 0.75rem; /* separa un poco la imagen del texto de abajo */
 }
