@@ -109,10 +109,27 @@ body {
     text-align: center;
     
 }
-
 .banner-image{
     max-width: 100%;
     height: auto;
     border-radius: var(--radius);
     margin-top: 1rem;
+}
+
+.btn-catalogo {
+    background-color: var(--verde-brillante);
+    display: inline-block;
+    color: var(--text-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.btn-catalogo:hover {
+    background-color: #b3e600; /* Tono más oscuro al posar el cursor */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
 }
