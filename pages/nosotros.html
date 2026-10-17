@@ -2,94 +2,151 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <!-- diseño responsivo, idth=device-width hace que se adapte a la pantalla, initica configura el zoom -->
+    <!-- Diseño responsivo: ajusta la vista a la pantalla de dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TechStore | Catalogo tecnologico</title>
+    <title>TechStore | Nosotros</title>
+    <!-- Conexión con la hoja de estilos externa para la vista Nosotros -->
     <link rel="stylesheet" href="../css/styles_nosotros.css" />
- 
 </head>
 
 <body>
+    <!-- ENCABEZADO PRINCIPAL -->
     <header>
-        <!-- panel del anuncio -->
+        <!-- Panel de anuncio superior promocional -->
         <div class="panel_anuncio">
             <p>ENVIO GRATIS EN COMPRAS MAYORES A 5,000. HASTA 12 CUOTAS SIN INTERESES.</p>
         </div>
-    <div class="encabezado">
-        <!--logo  -->
-        <a href="../index.html">
-         <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-        </a>
 
-        <nav class="nav-principal">
-         <!-- rutas relativas -->
-         <a href="../index.html">Inicio</a>
-         <a href="../pages/catalogo.html">Catálogo</a>
-         <a href="../pages/shopcart.html">Carrito</a>
-         <a href="../pages/contacto.html">Contacto</a>
-         <a href="../pages/nosotros.html">Nosotros</a>
-        </nav>
+        <div class="encabezado">
+            <!-- Logo principal con enlace para regresar al Inicio -->
+            <a href="../index.html">
+                <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+            </a>
 
-        <div class="acciones-usuario">
-         <a href="../pages/login.html">
-         <img src="../assets/img/usuario.svg" alt="Icono Usuario" class="icono">
-         </a>
-         <a href="../pages/shopcart.html">
-         <img src="../assets/img/carrito.svg" alt="Icono Carrito" class="icono">
-         
-          </a>
+            <!-- Navegación principal con rutas relativas corregidas desde la carpeta /pages -->
+            <nav class="nav-principal">
+                <a href="../index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="shopcart.html">Carrito</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.html">Nosotros</a>
+            </nav>
+
+            <!-- Accesos rápidos de usuario -->
+            <div class="acciones-usuario">
+                <a href="login.html">
+                    <img src="../assets/img/usuario.svg" alt="Icono Usuario" class="icono">
+                </a>
+                <a href="shopcart.html">
+                    <img src="../assets/img/carrito.svg" alt="Icono Carrito" class="icono">
+                </a>
+            </div>
         </div>
-     </div>
     </header>
-   
 
-
-      <main>
-
-
-
-      </main>
-      <!-- Pie de página semántico -->
-<footer style="background-color: #0b1329; color: #ffffff; padding: 3rem 2rem 2rem 2rem; font-family: sans-serif;">
-    
-    <!-- Contenedor flexible para organizar las 4 columnas de información -->
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+    <!-- CONTENIDO PRINCIPAL INSTITUCIONAL (Exigido en las especificaciones del proyecto) -->
+    <main style="max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: sans-serif;">
         
-        <!-- Columna 1: Logo y Lema -->
-        <div style="flex: 1; min-width: 200px;">
-            <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" style="height: 30px; filter: brightness(0) invert(1); margin-bottom: 0.8rem;">
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tecnología que mueve tu mundo.</p>
+        <!-- Sección 1: Título e Introducción -->
+        <section style="text-align: center; margin-bottom: 40px;">
+            <h1 style="color: #0f172a; font-size: 2.2rem; margin-bottom: 10px;">Sobre Nexora Tech Store</h1>
+            <p style="color: #64748b; font-size: 1.1rem; margin: 0;">Líderes en soluciones tecnológicas, equipos de cómputo y accesorios.</p>
+        </section>
+
+        <!-- Sección 2: Misión y Visión Corporativa (Organizados en 2 tarjetas flexibles) -->
+        <section style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
+            <!-- Tarjeta Misión -->
+            <article style="flex: 1; min-width: 280px; background-color: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <h2 style="color: #0f172a; margin-top: 0; font-size: 1.3rem;">🎯 Nuestra Misión</h2>
+                <p style="color: #475569; line-height: 1.6; margin: 0;">
+                    Proveer tecnología de vanguardia y calidad garantizada a nuestros clientes, ofreciendo asesoría técnica personalizada y facilidades de compra que potencien sus proyectos personales y profesionales.
+                </p>
+            </article>
+
+            <!-- Tarjeta Visión -->
+            <article style="flex: 1; min-width: 280px; background-color: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <h2 style="color: #0f172a; margin-top: 0; font-size: 1.3rem;">👁️ Nuestra Visión</h2>
+                <p style="color: #475569; line-height: 1.6; margin: 0;">
+                    Consolidarnos como el portal de comercio electrónico de tecnología de referencia en la región, reconocido por la excelencia en el servicio al cliente, la autenticidad de nuestros productos y el respaldo local.
+                </p>
+            </article>
+        </section>
+
+        <!-- Sección 3: Historia de la Empresa -->
+        <section style="background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h2 style="color: #0f172a; margin-top: 0; font-size: 1.3rem;">📖 Nuestra Historia</h2>
+            <p style="color: #475569; line-height: 1.6; margin: 0;">
+                Nexora Tech Store nació de una visión orientada a transformar la forma en que los usuarios adquieren productos tecnológicos en línea. Desde nuestras primeras operaciones, nos hemos enfocado en seleccionar un catálogo especializado de laptops, periféricos gaming, monitores y equipos de red con los más altos estándares de calidad y garantía oficial en el país.
+            </p>
+        </section>
+
+        <!-- Sección 4: Tabla de Sucursales y Horarios (Requisito estricto de la rúbrica W3C) -->
+        <section style="background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+            <h2 style="color: #0f172a; margin-top: 0; font-size: 1.3rem; margin-bottom: 20px;">🏢 Sucursales y Horarios de Atención</h2>
+            
+            <!-- Estructura tabular semántica con thead y tbody -->
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background-color: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+                        <th style="padding: 12px; color: #0f172a;">Ciudad</th>
+                        <th style="padding: 12px; color: #0f172a;">Dirección</th>
+                        <th style="padding: 12px; color: #0f172a;">Horario de Atención</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 12px; font-weight: bold; color: #0f172a;">Catacamas</td>
+                        <td style="padding: 12px; color: #475569;">Barrio El Centro, frente a la plaza comercial</td>
+                        <td style="padding: 12px; color: #475569;">Lunes a Sábado: 8:00 AM - 5:00 PM</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <td style="padding: 12px; font-weight: bold; color: #0f172a;">Tegucigalpa</td>
+                        <td style="padding: 12px; color: #475569;">Bulevar Morazán, Edificio Nexora, Nivel 2</td>
+                        <td style="padding: 12px; color: #475569;">Lunes a Sábado: 8:30 AM - 6:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA SEMÁNTICO -->
+    <footer style="background-color: #0b1329; color: #ffffff; padding: 3rem 2rem 2rem 2rem; font-family: sans-serif;">
+        <!-- Contenedor flexible para organizar las 4 columnas de información -->
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+            
+            <!-- Columna 1: Logo y Lema -->
+            <div style="flex: 1; min-width: 200px;">
+                <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" style="height: 30px; filter: brightness(0) invert(1); margin-bottom: 0.8rem;">
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tecnología que mueve tu mundo.</p>
+            </div>
+
+            <!-- Columna 2: Compra con confianza -->
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">Compra con confianza</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; color: #94a3b8; font-size: 0.85rem;">
+                    <li style="margin-bottom: 0.4rem;">Productos originales</li>
+                    <li>Garantía local</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: ¿Necesitas ayuda? -->
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">¿Necesitas ayuda?</h4>
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">soporte@nexora.hn</p>
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">+504 2200-9000</p>
+            </div>
+
+            <!-- Columna 4: Compra segura -->
+            <div style="flex: 1; min-width: 200px;">
+                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">🛡️ Compra segura</h4>
+                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Pago cifrado y protegido</p>
+            </div>
         </div>
 
-        <!-- Columna 2: Compra con confianza -->
-        <div style="flex: 1; min-width: 200px;">
-            <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">Compra con confianza</h4>
-            <ul style="list-style: none; padding: 0; margin: 0; color: #94a3b8; font-size: 0.85rem;">
-                <li style="margin-bottom: 0.4rem;">Productos originales</li>
-                <li>Garantía local</li>
-            </ul>
+        <!-- Pie inferior con derechos de autor -->
+        <div style="max-width: 1200px; margin: 2rem auto 0 auto; border-top: 1px solid #1e293b; padding-top: 1rem; text-align: center; color: #94a3b8; font-size: 0.8rem;">
+            <p style="margin: 0;">&copy; 2026 NEXORA Tech Store. Todos los derechos reservados.</p>
         </div>
-
-        <!-- Columna 3: ¿Necesitas ayuda? -->
-        <div style="flex: 1; min-width: 200px;">
-            <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">¿Necesitas ayuda?</h4>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">soporte@nexora.hn</p>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">+504 2200-9000</p>
-        </div>
-
-        <!-- Columna 4: Compra segura -->
-        <div style="flex: 1; min-width: 200px;">
-            <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">🛡️ Compra segura</h4>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Pago cifrado y protegido</p>
-        </div>
-
-    </div>
-
-    <!-- Pie inferior con derechos de autor -->
-    <div style="max-width: 1200px; margin: 2rem auto 0 auto; border-top: 1px solid #1e293b; padding-top: 1rem; text-align: center; color: #94a3b8; font-size: 0.8rem;">
-        <p style="margin: 0;">&copy; 2026 NEXORA Tech Store. Todos los derechos reservados.</p>
-    </div>
-
-</footer>
+    </footer>
 </body>
 </html>
