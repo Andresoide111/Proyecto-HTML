@@ -83,3 +83,55 @@
 .acciones-usuario .icono:hover {
     transform: scale(1.1); /* Efecto sutil al pasar el cursor */
 } 
+
+/* cuerpo categorias de los productos */
+
+.categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+     .producto {
+            background-color: var(--surface-color);
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            display: flex;
+            /* indica que los elementos dentro de la tarjeta se acomoda */
+            flex-direction: column; 
+            box-shadow: var(--shadow-sm);
+          
+        }
+        /* Controla el tamaño uniforme de las imágenes dentro de las tarjetas */
+    .producto img {
+         width: 100%;           /* hhace que la imagen ocupe todo el ancho disponible de la tarjeta */
+         height: 160px;        
+         object-fit: cover;     /* recorta la imagen proporcionalmente para que no se deforme */
+     
+}
+        .catalog-head {
+            margin-bottom: 1rem;
+        }
+
+        .catalog-head h2 {
+            font-size: 1.35rem;
+        }
+        /* tarjeta individual del producto con tamaño controlado */
+.product {
+    background-color: var(--surface-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+}
+
+.product img {
+    width: 100%;           /* hace que la imagen ocupe todo el ancho de su tarjeta */
+    height: 180px;         /* fija una altura exacta y ordenada */
+    object-fit: cover;     /* recorta y ajusta la foto para que no se deforme */
+    border-radius: 6px;    /* redondea ligeramente las esquinas superiores */
+    margin-bottom: 0.75rem; /* separa un poco la imagen del texto de abajo */
+}
