@@ -1,26 +1,33 @@
 :root {
-           /*  */
-            --primary-color: #0f172a;       /* Texto Principal  */
-            --btn-main: #bfff00;            /* Botones */
-            --verde-brillante: #a3e635;       /*  botón principal */
-            --bg-color: #f8fafc;            /* Fondo Principal */
-            --surface-color: #ffffff;       /* Tarjetas/formularios */
-            --text-color: #0f172a;          /* Texto Principal */
-            --text-muted: #64748b;          /* Texto Secundario  */
-            --color-claro: #e2e8f0;        /* Bordes  */
-            
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --radius: 8px;                  /* Bordes redondeados estándar */
-        }
+    /*  */
+    --primary-color: #0f172a;       /* Texto Principal  */
+    --btn-main: #bfff00;            /* Botones */
+    --verde-brillante: #a3e635;       /*  botón principal */
+    --bg-color: #f8fafc;            /* Fondo Principal */
+    --surface-color: #ffffff;       /* Tarjetas/formularios */
+    --text-color: #0f172a;          /* Texto Principal */
+    --text-muted: #64748b;          /* Texto Secundario  */
+    --color-claro: #e2e8f0;        /* Bordes  */
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --radius: 8px;                  /* Bordes redondeados estándar */
+}
 
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.5;
-            padding: 1rem;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 1rem;
+}
         /* ---------------------- */
 .panel_anuncio {
     background-color: var(--verde-brillante);
@@ -31,7 +38,7 @@
     border-bottom: 1px solid var(--border-color);
 }
 
-/*   alinear en 1 sola fila */
+/* Contenedor flexible para alinear en 1 sola fila */
 .encabezado{
     background-color: var(--surface-color);
     display: flex;
@@ -66,7 +73,7 @@
     color: var(--text-muted);
 }
 
-/* iconos de la derecha */
+/* Iconos de la derecha */
 .acciones-usuario {
     display: flex;
     align-items: center;
@@ -82,124 +89,282 @@
 
 .acciones-usuario .icono:hover {
     transform: scale(1.1); /* Efecto sutil al pasar el cursor */
-} 
+}
+
+.contacto {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.titulo-contacto {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-contacto h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.titulo-contacto p {
+    color: #666;
+}
+
+.tarjetas-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    background: #fff;
+    width: 250px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border-top: 5px solid #A6E22E;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icono-contacto {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tarjeta p {
+    color: #666;
+}
+
+.formulario-contacto {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #A6E22E;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background: #8fd41d;
+}
+
+.redes-sociales {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.redes-sociales h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.redes-sociales a {
+    text-decoration: none;
+    background: #333;
+    color: white;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.redes-sociales a:hover {
+    background: #A6E22E;
+    color: #333;
+}
+
 .contacto{
     width:90%;
     max-width:1100px;
     margin:40px auto;
 }
 
-.titulo-contacto{
+/* Sección del título principal */
+.titulo{
     text-align:center;
     margin-bottom:30px;
 }
 
-.titulo-contacto h1{
+/* Estilo del encabezado principal */
+.titulo h1{
     color:#333;
     margin-bottom:10px;
 }
 
-.titulo-contacto p{
+/* Texto descriptivo debajo del título */
+.titulo p{
     color:#666;
 }
 
-.tarjetas-contacto{
+/* ==========================
+   TARJETAS DE INFORMACIÓN
+========================== */
+
+/* Organiza las tarjetas en fila */
+.tarjetas{
     display:flex;
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
+/* Diseño individual de cada tarjeta */
 .tarjeta{
-    background:#fff;
     width:250px;
+    background:#fff;
     padding:25px;
+    border-radius:12px;
     text-align:center;
-    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
     border-top:5px solid #A6E22E;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.icono-contacto{
-    font-size:38px;
+/* Tamaño de los iconos */
+.tarjeta .icono{
+    font-size:40px;
     margin-bottom:10px;
 }
 
+/* Título de cada tarjeta */
 .tarjeta h3{
-    margin-bottom:10px;
     color:#333;
+    margin-bottom:10px;
 }
 
+/* Texto de cada tarjeta */
 .tarjeta p{
     color:#666;
 }
 
-.formulario-contacto{
+/* ==========================
+   FORMULARIO DE CONTACTO
+========================== */
+
+/* Contenedor del formulario */
+.formulario{
     background:#fff;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.formulario-contacto h2{
+/* Título del formulario */
+.formulario h2{
     text-align:center;
     margin-bottom:20px;
     color:#333;
 }
 
-.formulario-contacto label{
+/* Etiquetas de los campos */
+label{
     display:block;
     margin-top:15px;
     margin-bottom:5px;
     font-weight:bold;
 }
 
-.formulario-contacto input,
-.formulario-contacto textarea{
+/* Estilo para cajas de texto */
+input,
+textarea{
     width:100%;
     padding:12px;
     border:1px solid #ccc;
-    border-radius:5px;
+    border-radius:6px;
 }
 
-.formulario-contacto button{
+/* Evita que el usuario cambie el tamaño del textarea */
+textarea{
+    resize:none;
+}
+
+/* Botón de enviar */
+button{
     width:100%;
     margin-top:20px;
     padding:12px;
     border:none;
-    border-radius:5px;
+    border-radius:6px;
     background:#A6E22E;
     color:#333;
     font-weight:bold;
     cursor:pointer;
+    font-size:16px;
 }
 
-.formulario-contacto button:hover{
+/* Efecto al pasar el mouse por encima */
+button:hover{
     background:#8fd41d;
 }
 
-.redes-sociales{
-    text-align:center;
+/* ==========================
+   REDES SOCIALES
+========================== */
+
+/* Contenedor de redes sociales */
+.redes{
     margin-top:30px;
+    text-align:center;
 }
 
-.redes-sociales h2{
-    margin-bottom:15px;
+/* Título de redes sociales */
+.redes h2{
     color:#333;
+    margin-bottom:15px;
 }
 
-.redes-sociales a{
+/* Diseño de los botones de redes */
+.redes a{
+    display:inline-block;
     text-decoration:none;
+    margin:5px;
+    padding:10px 18px;
     background:#333;
     color:white;
-    padding:10px 18px;
-    margin:5px;
-    border-radius:5px;
-    display:inline-block;
+    border-radius:6px;
 }
 
-.redes-sociales a:hover{
+/* Cambio de color al pasar el mouse */
+.redes a:hover{
     background:#A6E22E;
     color:#333;
 }

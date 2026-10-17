@@ -1,27 +1,43 @@
 :root {
-           /*  */
-            --primary-color: #0f172a;       /* Texto Principal  */
-            --btn-main: #bfff00;            /* Botones */
-            --verde-brillante: #a3e635;       /*  botón principal */
-            --bg-color: #f8fafc;            /* Fondo Principal */
-            --surface-color: #ffffff;       /* Tarjetas/formularios */
-            --text-color: #0f172a;          /* Texto Principal */
-            --text-muted: #64748b;          /* Texto Secundario  */
-            --color-claro: #e2e8f0;        /* Bordes  */
-            
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --radius: 8px;                  /* Bordes redondeados estándar */
-        }
+    /*  */
+    --primary-color: #0f172a;
+    /* Texto Principal  */
+    --btn-main: #bfff00;
+    /* Botones */
+    --verde-brillante: #a3e635;
+    /*  botón principal */
+    --bg-color: #f8fafc;
+    /* Fondo Principal */
+    --surface-color: #ffffff;
+    /* Tarjetas/formularios */
+    --text-color: #0f172a;
+    /* Texto Principal */
+    --text-muted: #64748b;
+    /* Texto Secundario  */
+    --color-claro: #e2e8f0;
+    /* Bordes  */
 
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.5;
-            padding: 1rem;
-        }
-        /* ---------------------- */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+    /* Bordes redondeados estándar */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+/* ---------------------- */
 .panel_anuncio {
     background-color: var(--verde-brillante);
     color: var(--text-color);
@@ -32,11 +48,11 @@
 }
 
 /*   alinear en 1 sola fila */
-.encabezado{
+.encabezado {
     background-color: var(--surface-color);
     display: flex;
-    justify-content: space-between; /* Separa Logo, Menú e Iconos a los extremos */
-    align-items: center;            /* Centra todo verticalmente */
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
@@ -51,7 +67,8 @@
 /* menú de navegación centrado */
 .nav-principal {
     display: flex;
-    gap: 1.5rem; /* espacio uniforme entre enlaces */
+    gap: 1.5rem;
+    /* espacio uniforme entre enlaces */
 }
 
 .nav-principal a {
@@ -81,5 +98,6 @@
 }
 
 .acciones-usuario .icono:hover {
-    transform: scale(1.1); /* Efecto sutil al pasar el cursor */
-} 
+    transform: scale(1.1);
+    /* Efecto sutil al pasar el cursor */
+}
