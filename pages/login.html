@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,91 +10,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles_login.css">
 </head>
+
 <body>
 
     <!-- boton para cambiar de modo oscuro a claro -->
     <button class="cambiar_modo" id="modo" type="button">
-        <!-- se le puede asignar dos clase al mismo elemento separados por un espacio, el primero se 
-         puede compartir el segundo es para ser mas especifico "class="iconos luna" -->
-
-         <img src="../assets/img/icono_luna.svg" alt="Modo Oscuro" class="iconos luna">
-         <img src="../assets/img/icono_sol.svg" alt="Modo Claro" class="theme-icon sol">
+        <img src="../assets/img/icono_luna.svg" alt="Modo Oscuro" class="iconos luna">
+        <img src="../assets/img/icono_sol.svg" alt="Modo Claro" class="theme-icon sol">
     </button>
 
-    <main class="cuerpo_login">
-        <!-- Logo -->
-        <a href="../Index.html" class="logo-link">
-            <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
-        </a>
+    <div class="contenedor-centrado">
+        <main class="cuerpo_login">
+            <!-- Logo con la corrección en Index.html -->
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+            </a>
 
-       
-        <h2>Iniciar Sesión</h2>
+            <h2>Iniciar Sesión</h2>
 
-        <!-- Formulario -->
-        <form class="form_login">
-            <div class="form">
-                <label for="email">Correo electrónico</label>
-                <div class="entradas_form">
-                    <input type="email" id="email" placeholder="correo@ejemplo.com" required>
-                    <span class="input-icon">✉</span>
+            <!-- Formulario -->
+            <form class="form_login">
+                <div class="form">
+                    <label for="email">Correo electrónico</label>
+                    <div class="entradas_form">
+                        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                        <span class="input-icon">✉</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <div class="entradas_form">
-                    <input type="password" id="password" placeholder="••••••••" required>
-                    <span class="input-icon">👁</span>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="entradas_form">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <span class="input-icon">👁</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form_enlace">
-                <a href="#" class="password">¿Olvidé mi contraseña?</a>
-            </div>
+                <div class="form_enlace">
+                    <a href="#" class="password">¿Olvidé mi contraseña?</a>
+                </div>
 
-            <button type="submit" class="btn_iniciar">Iniciar Sesión</button>
-        </form>
+                <button type="submit" class="btn_iniciar">Iniciar Sesión</button>
+            </form>
 
-        
-        <p class="txt">
-            ¿No tienes cuenta? <a href="#">Regístrate</a>
-        </p>
-    </main>
-    <footer style="background-color: #0b1329; color: #ffffff; padding: 3rem 2rem 1.5rem 2rem; font-family: 'Inter', sans-serif;">
-    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; align-items: start;">
-        
-        <!-- Columna 1: Logo Nexora -->
-        <div>
-            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
-                <img src="../assets/img/logo-nexora.svg" alt="Nexora Logo" style="height: 32px; filter: brightness(0) invert(1);">
-            </div>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tecnología que mueve tu mundo.</p>
-        </div>
 
-        <!-- Columna 2: Compra con confianza -->
-        <div>
-            <h4 style="font-size: 0.9rem; font-weight: 700; margin-top: 0; margin-bottom: 0.8rem; color: #ffffff;">Compra con confianza</h4>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Productos originales</p>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Garantía local</p>
-        </div>
-
-        <!-- Columna 3: ¿Necesitas ayuda? -->
-        <div>
-            <h4 style="font-size: 0.9rem; font-weight: 700; margin-top: 0; margin-bottom: 0.8rem; color: #ffffff;">¿Necesitas ayuda?</h4>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">soporte@nexora.hn</p>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">+504 2200-9000</p>
-        </div>
-
-        <!-- Columna 4: Compra segura -->
-        <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
-                <svg width="20" height="20" fill="none" stroke="#bef264" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                <h4 style="font-size: 0.9rem; font-weight: 700; margin: 0; color: #ffffff;">Compra segura</h4>
-            </div>
-            <p style="color: #94a3b8; font-size: 0.8rem; margin: 0;">Pago cifrado y protegido</p>
-        </div>
-
+            <p class="txt">
+                ¿No tienes cuenta? <a href="#">Regístrate</a>
+            </p>
+        </main>
     </div>
-</footer>
+
+        <footer
+            style="background-color: #0b1329; color: #ffffff; padding: 3rem 2rem 1.5rem 2rem; font-family: 'Inter', sans-serif;">
+            <div
+                style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; align-items: start;">
+
+                <!-- Columna 1: Logo Nexora -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+                        <img src="../assets/img/logo-nexora.svg" alt="Nexora Logo"
+                            style="height: 32px; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tecnología que mueve tu mundo.</p>
+                </div>
+
+                <!-- Columna 2: Compra con confianza -->
+                <div>
+                    <h4
+                        style="font-size: 0.9rem; font-weight: 700; margin-top: 0; margin-bottom: 0.8rem; color: #ffffff;">
+                        Compra con confianza</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Productos originales</p>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Garantía local</p>
+                </div>
+
+                <!-- Columna 3: ¿Necesitas ayuda? -->
+                <div>
+                    <h4
+                        style="font-size: 0.9rem; font-weight: 700; margin-top: 0; margin-bottom: 0.8rem; color: #ffffff;">
+                        ¿Necesitas ayuda?</h4>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">soporte@nexora.hn</p>
+                    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">+504 2200-9000</p>
+                </div>
+
+                <!-- Columna 4: Compra segura -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+                        <svg width="20" height="20" fill="none" stroke="#bef264" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                        <h4 style="font-size: 0.9rem; font-weight: 700; margin: 0; color: #ffffff;">Compra segura</h4>
+                    </div>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin: 0;">Pago cifrado y protegido</p>
+                </div>
+            </div>
+        </footer>
 </body>
+
 </html>

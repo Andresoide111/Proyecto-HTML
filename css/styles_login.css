@@ -12,7 +12,6 @@
 
 /* Modo Oscuro */
 body.modo_oscuro {
-    /*  */
     --bg-color: #0F172A;
     --text-primary: #F8FAFC;
     --text-secondary: #94A3B8;
@@ -35,13 +34,18 @@ body {
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* CORRECCIÓN: Coloca los elementos hacia abajo */
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
 }
 
-/* --- BOTÓN CAMBIAR MODO --- */
+.contenedor-centrado {
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cambiar_modo {
     position: absolute;
     top: 20px;
@@ -55,28 +59,24 @@ body {
     justify-content: center;
 }
 
-/* Tamaños de los iconos */
 .cambiar_modo img {
     width: 24px;
     height: 24px;
 }
 
-/* Por defecto en Modo Claro/
-.cambiar_modo .sol {
+/* CORRECCIÓN: Ocultar el sol por defecto en modo claro */
+.sol {
     display: none;
 }
-.cambiar_modo .luna {
-    display: block;
-}
 
-/* Cuando se active el Modo Oscuro: mostramos el sol, ocultamos la luna */
-body.dark-mode .cambiar_modo .luna {
+/* CORRECCIÓN: Usar exactamente .modo_oscuro */
+body.modo_oscuro .cambiar_modo .luna {
     display: none;
 }
-body.dark-mode .cambiar_modo .sol {
+
+body.modo_oscuro .cambiar_modo .sol {
     display: block;
 }
-
 
 /* --- CONTENEDOR PRINCIPAL (LOGIN) --- */
 .cuerpo_login {
@@ -108,7 +108,7 @@ body.dark-mode .cambiar_modo .sol {
     text-align: left;
 }
 
-.form label, 
+.form label,
 .form-group label {
     display: block;
     font-size: 0.875rem;
