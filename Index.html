@@ -44,75 +44,25 @@
     </header>
     
 
-    <form id="form1" runat="server">
+    <form>
         <div class="layout">
-
-                <div class="side-note">
-
-                    <h3>Rendimiento para tus ideas</h3>
-                    <p>Laptops, monitores y accesorios para llevar tu experiencia al siguiente nivel.</p>
-                    <a href="#catalogo" class="btn">Ver productos</a>
-                </div>
             </aside>
-
             <main>
-                <section class="hero">
+                <section class="bannerheader">
                     <div>
                         <span class="tag">TECNOLOGIA PARA TU DIA A DIA</span>
-                        <h1>Catalogo de Productos</h1>
-                        <p>Encuentra los mejores equipos y accesorios de tecnologia con calidad y buen precio.</p>
+                        <h1>Explora nuestros nuevos productos</h1>                      
                     </div>
+                </section> 
+                <section class="banner-white">
+                    <img src="assets/img/Banner_index.jpg" alt="Imagen de productos tecnologicos" class="banner-image" width="1000" height="500">
+                    <p>Lo ultimo en tecnologia solo aquí.</p>
                 </section>
+                <section class="banner-dark">
+                    <img src="assets/img/Banner2_index.jpg" alt="Imagen de productos tecnologicos" class="banner-image" width="1000" height="500">
+                    <p>Descubre nuestras novedades.</p>
+                </section>  
 
-                <section class="categories">
-                    <a class="category" href="#catalogo">
-                        <strong>(una laptop) Laptops</strong>
-                        <span>Rendimiento y portabilidad</span>
-                    </a>
-                    <a class="category" href="#catalogo">
-                        <strong>(un monitor) Monitores</strong>
-                        <span>Mejores graficos y detalle</span>
-                    </a>
-                    <a class="category" href="#catalogo">
-                        <strong>(unos audifonos) Accesorios</strong>
-                        <span>Complementa tu equipo</span>
-                    </a>
-                    <a class="category" href="#catalogo">
-                        <strong>(un router) Redes</strong>
-                        <span>Conexion sin limites</span>
-                    </a>        
-                </section>
-
-                <section id="catalogo">
-                    <div class="catalog-head">
-                        <h2>Productos destacados</h2>
-                        <span class="muted">Explora nuestro catalogo</span>
-                    </div>
-
-                    <div class="products">
-                        <asp:Repeater ID="rptProductos" runat="server">
-                            <ItemTemplate>
-                                <article class="product">
-                                    <img src='<%#: Eval("Imagen") %>' loading="lazy" alt="Producto" />
-
-                                    <span class="tag">("Categoria")</span>
-                                    <h3>("Nombre")</h3>
-                                    <div class="description">
-                                        ("Descripcion")
-                                    </div>
-
-                                    <div class="price">
-                                        ("Precio")
-                                    </div>
-
-                                    <a class="btn" href="#">
-                                        Ver ficha tecnica
-                                    </a>
-                                </article>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </div>
-                </section>                
             </main>
         </div>
     </form>
