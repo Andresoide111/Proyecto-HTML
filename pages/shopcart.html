@@ -5,25 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEXORA - Carrito de Compras</title>
     <link rel="stylesheet" href="../css/styles_shopcart.css">
-    <script>
-        // Función para cargar el Header
-        fetch('../components/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-
-        // Función para cargar el Footer
-        fetch('../components/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    </script>
+   
 </head>
 
 <body>
-    <div id="header-container"></div>
+ <header>
+        <!-- panel del anuncio -->
+        <div class="panel_anuncio">
+            <p>ENVIO GRATIS EN COMPRAS MAYORES A 5,000. HASTA 12 CUOTAS SIN INTERESES.</p>
+        </div>
+    <div class="encabezado">
+        <!--logo  -->
+        <a href="../index.html">
+         <img src="../assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+        </a>
+
+        <nav class="nav-principal">
+         <!-- rutas relativas -->
+         <a href="../index.html">Inicio</a>
+         <a href="../pages/catalogo.html">Catálogo</a>
+         <a href="../pages/shopcart.html">Carrito</a>
+         <a href="../pages/contacto.html">Contacto</a>
+         <a href="../pages/nosotros.html">Nosotros</a>
+        </nav>
+
+        <div class="acciones-usuario">
+         <a href="pages/login.html">
+         <img src="../assets/img/usuario.svg" alt="Icono Usuario" class="icono">
+         </a>
+         <a href="pages/shopcart.html">
+         <img src="../assets/img/carrito.svg" alt="Icono Carrito" class="icono">
+         
+          </a>
+        </div>
+     </div>
+    </header>
+    <hr>
+
+    <!-- ------------------------------- -->
+    
     
     <a class="back-link" href="../Index.html">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -56,7 +76,9 @@
                 </a>
             </div>
         </section>
+        <footer id="contacto">  © 2026 Nexora | Catalogo de productos tecnologicos
+    </footer>
     </main>
-    <div id="footer-container"></div>
+    
 </body>
 </html>

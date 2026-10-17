@@ -1,6 +1,4 @@
-        /* ==========================================================================
-           1. REINICIO GLOBAL Y VARIABLES DE ESTILO
-           ========================================================================== */
+      
         * {
             box-sizing: border-box;
             margin: 0;
@@ -8,14 +6,16 @@
         }
 
         :root {
-            /* Paleta de colores moderna para tienda tecnológica */
-            --primary-color: #2563eb;       /* Azul principal */
-            --primary-hover: #1d4ed8;       /* Azul para efectos hover */
-            --bg-color: #f8fafc;            /* Fondo gris claro suave */
-            --surface-color: #ffffff;       /* Fondo de tarjetas y header */
-            --text-color: #0f172a;          /* Texto principal sombreado */
-            --text-muted: #64748b;          /* Texto secundario */
-            --border-color: #e2e8f0;        /* Borde sutil */
+           /*  */
+            --primary-color: #0f172a;       /* Texto Principal  */
+            --btn-main: #bfff00;            /* Botones */
+            --verde-brillante: #a3e635;       /*  botón principal */
+            --bg-color: #f8fafc;            /* Fondo Principal */
+            --surface-color: #ffffff;       /* Tarjetas/formularios */
+            --text-color: #0f172a;          /* Texto Principal */
+            --text-muted: #64748b;          /* Texto Secundario  */
+            --color-claro: #e2e8f0;        /* Bordes  */
+            
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
             --radius: 8px;                  /* Bordes redondeados estándar */
@@ -28,6 +28,69 @@
             line-height: 1.5;
             padding: 1rem;
         }
+        /* ---------------------- */
+.panel_anuncio {
+    background-color: var(--verde-brillante);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Contenedor flexible para alinear en 1 sola fila */
+.encabezado{
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: space-between; /* Separa Logo, Menú e Iconos a los extremos */
+    align-items: center;            /* Centra todo verticalmente */
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Estilo del Logo */
+.logo-nexora {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Menú de navegación centrado */
+.nav-principal {
+    display: flex;
+    gap: 1.5rem; /* Espacio uniforme entre enlaces */
+}
+
+.nav-principal a {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-principal a:hover {
+    color: var(--text-muted);
+}
+
+/* Iconos de la derecha */
+.acciones-usuario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.acciones-usuario .icono {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.acciones-usuario .icono:hover {
+    transform: scale(1.1); /* Efecto sutil al pasar el cursor */
+}
+        /* ------------------------- */
 
         a {
             color: var(--primary-color);
