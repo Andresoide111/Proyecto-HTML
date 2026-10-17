@@ -48,6 +48,11 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* menú de navegación centrado */
+.nav-principal {
+    display: flex;
+    gap: 1.5rem; /* espacio uniforme entre enlaces */
+}
 
 .nav-principal a {
     color: var(--text-color);
@@ -98,6 +103,7 @@ body {
 .banner-dark {
     background-color: var(--text-color);
     padding: 2rem;
+    color: var(--bg-color);
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
     text-align: center;
