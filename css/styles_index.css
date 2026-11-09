@@ -1,15 +1,15 @@
 :root {
     /*  */
-    --primary-color: #0f172a;       /* Texto Principal  */
-    --btn-main: #bfff00;            /* Botones */
-    --verde-brillante: #a3e635;       /*  botón principal */
-    --bg-color: #f8fafc;            /* Fondo Principal */
+    --primary-color: #17313B;       /* Texto Principal  */
+    --btn-main: #0F7772;            /* Botones */
+    --btn-principal: #168C86;       /*  botón principal */
+    --bg-color: #F4F5F0;            /* Fondo Principal */
     --surface-color: #ffffff;       /* Tarjetas/formularios */
     --text-color: #0f172a;          /* Texto Principal */
-    --text-muted: #64748b;          /* Texto Secundario  */
+    --text-muted: #63767C;          /* Texto Secundario  */
     --color-claro: #e2e8f0;        /* Bordes  */
     
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
     --radius: 8px;                  /* Bordes redondeados estándar */
 }
@@ -25,13 +25,13 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.5;
-    padding: 1rem;
+    padding: 0.3rem;
 }
         /* ---------------------- */
 .panel_anuncio {
-    background-color: var(--verde-brillante);
-    color: var(--text-color);
-    text-align: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: right;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
     border-bottom: 1px solid var(--border-color);
@@ -47,11 +47,15 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Estilo del logo */
-.logo-nexora {
-    max-width: 150px;
-    height: auto;
+.logo-hospital {
+    height: 50px;
+    width: auto;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-hospital:hover {
+    transform: scale(1.02);
 }
 
 /* menú de navegación centrado */
@@ -80,8 +84,8 @@ body {
 }
 
 .acciones-usuario .icono {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -90,13 +94,23 @@ body {
     transform: scale(1.1); /* Efecto sutil al pasar el cursor */
 }
 
-.bannerheader {
-    background-color: var(--text-color);
+.bannerprincipal {
+    display: flex;
+    gap: 1rem; /* Espacio entre las dos imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
     padding: 2rem;
-    color: var(--bg-color);
+    background-color: var(--bg-color);
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
-    text-align: center;
+}
+.banner-box {
+    flex: 1; /* Cada banner-box ocupa la mitad del espacio disponible */
+    padding: 1rem;
+}
+.text-green {
+    color: var(--btn-principal);
+    font-weight: bold;
 }
 .banner-white {
     background-color: var(--surface-color);
@@ -122,22 +136,22 @@ body {
     margin-top: 1rem;
 }
 
-.btn-catalogo {
-    background-color: var(--verde-brillante);
+.btn-agendar {
+    background-color: var(--btn-principal);
     display: inline-block;
-    color: var(--text-color);
+    color: var(--bg-color);
     border: none;
     text-align: center;
     text-decoration: none;
-    padding: 15px 30px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 15px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn-catalogo:hover {
-    background-color: #b3e600; /* Tono más oscuro al posar el cursor */
+.btn-agendar:hover {
+    background-color: var(--btn-main); /* Tono más oscuro al posar el cursor */
     transform: translateY(-2px); /* Pequeño efecto de elevación */
 }
 
