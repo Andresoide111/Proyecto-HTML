@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <!-- diseño responsivo, idth=device-width hace que se adapte a la pantalla, initica configura el zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TechStore | Inicio</title>
+    <title>Santa Lucía | Inicio</title>
     <link rel="stylesheet" href="css/styles_index.css" />
 
 
@@ -15,31 +15,36 @@
     <header>
         <!-- panel del anuncio -->
         <div class="panel_anuncio">
-            <p>ENVIO GRATIS EN COMPRAS MAYORES A 5,000. HASTA 12 CUOTAS SIN INTERESES.</p>
+            <a><img src="assets/img/telefono.svg" alt="Icono Teléfono" class="icono"> Emergencias: +504 2234-5555 | </a>
+            <a><img src="assets/img/horario.svg" alt="Icono Horario" class="icono"> Atención: Lun–Sáb, 7:00 a.m. – 7:00
+                p.m</a>
         </div>
         <div class="encabezado">
             <!--logo  -->
-            <a href="index.html">
-                <img src="assets/img/logo-nexora.svg" alt="Logo Nexora" class="logo-nexora">
+            <a href="Default.aspx" class="logo-link">
+                <img src="assets/img/logo-SantaLucia.svg" alt="Logo Hospital Santa Lucía" class="logo-hospital"
+                    height="50">
             </a>
 
             <nav class="nav-principal">
                 <!-- rutas relativas -->
                 <a href="index.html">Inicio</a>
-                <a href="pages/catalogo.html">Catálogo</a>
-                <a href="pages/shopcart.html">Carrito</a>
-                <a href="pages/contacto.html">Contacto</a>
-                <a href="pages/nosotros.html">Nosotros</a>
+                <a href="pages/catalogo.html">Espcialidades</a>
+                <a href="pages/shopcart.html">Especialistas</a>
+                <a href="pages/contacto.html">Consultar cita</a>
+                <a href="pages/nosotros.html">Contacto</a>
             </nav>
 
             <div class="acciones-usuario">
                 <a href="pages/login.html">
-                    <img src="assets/img/usuario.svg" alt="Icono Usuario" class="icono">
+                    <img src="assets/img/usuario.svg" alt="Icono Usuario" class="icono"> Inicia sesión
                 </a>
-                <a href="pages/shopcart.html">
-                    <img src="assets/img/carrito.svg" alt="Icono Carrito" class="icono">
+                <button>
+                    <a class="btn-agendar" href="pages/catalogo.html">
+                        <img src="assets/img/calendario.svg" alt="calendario"> Agendar una cita
+                    </a>
+                </button>
 
-                </a>
             </div>
         </div>
     </header>
@@ -49,10 +54,26 @@
         <div class="layout">
             </aside>
             <main>
-                <section class="bannerheader">
-                    <div>
-                        <span class="tag">TECNOLOGIA PARA TU DIA A DIA</span>
-                        <h1>Explora nuestros nuevos productos</h1>
+                <section class="bannerprincipal">
+                    <div class="banner-box">
+                        <span class="tag">Cuidamos lo que más importa</span>
+                        <h1>
+                            <p>Medicina humana.</p>
+                            <p class="text-green">Atención</p>
+                            <p class="text-green">extraordinaria.</p>
+                        </h1>
+                        <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu
+                            bienestar comienza aquí.</p>
+                        <br>
+                        <button">
+                            <a class="btn-agendar" href="pages/catalogo.html">Agendar una cita <img
+                                    src="assets/img/flecha.svg" alt="Flecha" class="icono-flecha"></a>
+                            </button>
+                    </div>
+
+                    <div class="banner-box">
+                        <img src="assets/img/banner-principal.jpg" alt="Imagen publicitaria" class="banner-image"
+                            width="1000" height="500">
                     </div>
                 </section>
                 <section class="banner-white">
@@ -68,15 +89,15 @@
                 <section class="banner-dual">
                     <!-- Primera Imagen -->
                     <div class="imagen-box">
-                        <img src="assets/img/Telefono_index.jpg" alt="Dispositivo Xbox" class="img-fluida"
-                            width="700" height="400">
-                            <h2>Encuentra los mejores Dispositivos Móviles.</h2>
+                        <img src="assets/img/Telefono_index.jpg" alt="Dispositivo Xbox" class="img-fluida" width="700"
+                            height="400">
+                        <h2>Encuentra los mejores Dispositivos Móviles.</h2>
                     </div>
                     <!-- Segunda Imagen -->
                     <div class="imagen-box">
-                        <img src="assets/img/Monitor_index.jpg" alt="Dispositivo Samsung" class="img-fluida"
-                            width="700" height="400">
-                            <h2>Monitores de alta calidad para tu Trabajo y Entretenimiento.</h2>
+                        <img src="assets/img/Monitor_index.jpg" alt="Dispositivo Samsung" class="img-fluida" width="700"
+                            height="400">
+                        <h2>Monitores de alta calidad para tu Trabajo y Entretenimiento.</h2>
                     </div>
                 </section>
                 <section class="banner-white">
