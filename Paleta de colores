@@ -2,33 +2,33 @@
 
 | Uso | Color | Hex |
 |---|---|---|
-| Azul marino principal | ![#0B2E3F](https://placehold.co/24x24/0B2E3F/0B2E3F.png) | `#0B2E3F` |
-| Azul marino secundario | ![#123E50](https://placehold.co/24x24/123E50/123E50.png) | `#123E50` |
-| Verde turquesa principal | ![#168C86](https://placehold.co/24x24/168C86/168C86.png) | `#168C86` |
-| Turquesa oscuro | ![#0F7772](https://placehold.co/24x24/0F7772/0F7772.png) | `#0F7772` |
-| Verde menta claro | ![#DFF2EF](https://placehold.co/24x24/DFF2EF/DFF2EF.png) | `#DFF2EF` |
-| Fondo crema | ![#F4F5F0](https://placehold.co/24x24/F4F5F0/F4F5F0.png) | `#F4F5F0` |
-| Blanco | ![#FFFFFF](https://placehold.co/24x24/FFFFFF/FFFFFF.png) | `#FFFFFF` |
+| Azul marino principal | ![#0B2E3F](https://placehold.co/24x24/0B2E3F/0B2E3F.png) | #0B2E3F |
+| Azul marino secundario | ![#123E50](https://placehold.co/24x24/123E50/123E50.png) | #123E50 |
+| Verde turquesa principal | ![#168C86](https://placehold.co/24x24/168C86/168C86.png) | #168C86 |
+| Turquesa oscuro | ![#0F7772](https://placehold.co/24x24/0F7772/0F7772.png) | #0F7772 |
+| Verde menta claro | ![#DFF2EF](https://placehold.co/24x24/DFF2EF/DFF2EF.png) | #DFF2EF |
+| Fondo crema | ![#F4F5F0](https://placehold.co/24x24/F4F5F0/F4F5F0.png) | #F4F5F0 |
+| Blanco | ![#FFFFFF](https://placehold.co/24x24/FFFFFF/FFFFFF.png) | #FFFFFF |
 
 ## Texto y estructura
 
 | Uso | Color | Hex |
 |---|---|---|
-| Texto principal | ![#17313B](https://placehold.co/24x24/17313B/17313B.png) | `#17313B` |
-| Texto secundario | ![#63767C](https://placehold.co/24x24/63767C/63767C.png) | `#63767C` |
-| Bordes y divisores | ![#DBE4E3](https://placehold.co/24x24/DBE4E3/DBE4E3.png) | `#DBE4E3` |
-| Fondo claro de campos | ![#FBFCFA](https://placehold.co/24x24/FBFCFA/FBFCFA.png) | `#FBFCFA` |
+| Texto principal | ![#17313B](https://placehold.co/24x24/17313B/17313B.png) | #17313B |
+| Texto secundario | ![#63767C](https://placehold.co/24x24/63767C/63767C.png) | #63767C |
+| Bordes y divisores | ![#DBE4E3](https://placehold.co/24x24/DBE4E3/DBE4E3.png) | #DBE4E3 |
+| Fondo claro de campos | ![#FBFCFA](https://placehold.co/24x24/FBFCFA/FBFCFA.png) | #FBFCFA |
 
 ## Estados y retroalimentación
 
 | Uso | Color | Hex |
 |---|---|---|
-| Error y advertencia | ![#E2775B](https://placehold.co/24x24/E2775B/E2775B.png) | `#E2775B` |
-| Texto de error | ![#9A422F](https://placehold.co/24x24/9A422F/9A422F.png) | `#9A422F` |
-| Fondo de error | ![#FFF4F0](https://placehold.co/24x24/FFF4F0/FFF4F0.png) | `#FFF4F0` |
-| Estado disponible | ![#3BAA71](https://placehold.co/24x24/3BAA71/3BAA71.png) | `#3BAA71` |
-| Texto de éxito | ![#216E4D](https://placehold.co/24x24/216E4D/216E4D.png) | `#216E4D` |
-| Fondo de éxito | ![#DBF2E6](https://placehold.co/24x24/DBF2E6/DBF2E6.png) | `#DBF2E6` |
-| Turquesa claro sobre fondos oscuros | ![#8ED1CA](https://placehold.co/24x24/8ED1CA/8ED1CA.png) | `#8ED1CA` |
+| Error y advertencia | ![#E2775B](https://placehold.co/24x24/E2775B/E2775B.png) | #E2775B |
+| Texto de error | ![#9A422F](https://placehold.co/24x24/9A422F/9A422F.png) | #9A422F |
+| Fondo de error | ![#FFF4F0](https://placehold.co/24x24/FFF4F0/FFF4F0.png) | #FFF4F0 |
+| Estado disponible | ![#3BAA71](https://placehold.co/24x24/3BAA71/3BAA71.png) | #3BAA71 |
+| Texto de éxito | ![#216E4D](https://placehold.co/24x24/216E4D/216E4D.png) | #216E4D |
+| Fondo de éxito | ![#DBF2E6](https://placehold.co/24x24/DBF2E6/DBF2E6.png) | #DBF2E6 |
+| Turquesa claro sobre fondos oscuros | ![#8ED1CA](https://placehold.co/24x24/8ED1CA/8ED1CA.png) | #8ED1CA |
 
-La combinación principal de la identidad visual es **azul marino `#0B2E3F` + turquesa `#168C86` + menta `#DFF2EF` + crema `#F4F5F0`**.
+La combinación principal de la identidad visual es **azul marino #0B2E3F + turquesa #168C86 + menta #DFF2EF + crema #F4F5F0**.
