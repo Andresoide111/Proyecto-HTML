@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #17313B;
-    --btn-main: #0F7772;
-    --btn-principal: #168C86;
-    --bg-color: #F4F5F0;
-    --surface-color: #ffffff;
-    --text-color: #0f172a;
-    --text-muted: #63767C;
-    --color-claro: #e2e8f0;
-    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --primary_color: #17313B;
+    --btn_main: #0F7772;
+    --btn_principal: #168C86;
+    --bg_color: #F4F5F0;
+    --surface_color: #ffffff;
+    --text_color: #0f172a;
+    --text_muted: #63767C;
+    --color_claro: #e2e8f0;
+    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
     --radius: 8px;
 }
 
@@ -17,8 +17,8 @@
 
 body {
     margin: 0;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--bg_color);
+    color: var(--text_color);
     font-family: "Segoe UI", system-ui, sans-serif;
     line-height: 1.5;
 }
@@ -36,13 +36,13 @@ body {
 
 .encabezado-pagina h1 {
     margin: 0 0 0.5rem;
-    color: var(--primary-color);
+    color: var(--primary_color);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 .encabezado-pagina p {
     margin: 0;
-    color: var(--text-muted);
+    color: var(--text_muted);
 }
 
 .consulta-layout {
@@ -55,16 +55,16 @@ body {
 .consulta-formulario,
 .cita-resultado {
     padding: clamp(1.25rem, 3vw, 2rem);
-    border: 1px solid var(--color-claro);
+    border: 1px solid var(--color_claro);
     border-radius: var(--radius);
-    background: var(--surface-color);
-    box-shadow: var(--shadow-sm);
+    background: var(--surface_color);
+    box-shadow: var(--shadow_sm);
 }
 
 .consulta-formulario h2,
 .cita-resultado h2 {
     margin: 0 0 1.25rem;
-    color: var(--primary-color);
+    color: var(--primary_color);
     font-size: 1.2rem;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .campo label {
-    color: var(--primary-color);
+    color: var(--primary_color);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -87,13 +87,13 @@ body {
     border: 1px solid #cbd5d8;
     border-radius: 6px;
     background: #fff;
-    color: var(--text-color);
+    color: var(--text_color);
     font: inherit;
 }
 
 .campo input:focus {
     outline: 3px solid rgba(22, 140, 134, 0.2);
-    border-color: var(--btn-principal);
+    border-color: var(--btn_principal);
 }
 
 .boton {
@@ -104,7 +104,7 @@ body {
     padding: 0.7rem 1.2rem;
     border: 0;
     border-radius: 6px;
-    background: var(--btn-principal);
+    background: var(--btn_principal);
     color: #fff;
     font: inherit;
     font-weight: 700;
@@ -113,7 +113,7 @@ body {
 }
 
 .boton:hover {
-    background: var(--btn-main);
+    background: var(--btn_main);
 }
 
 .consulta-formulario .boton {
@@ -126,7 +126,7 @@ body {
 
 .cita-resultado p {
     margin: 0.4rem 0;
-    color: var(--text-muted);
+    color: var(--text_muted);
 }
 
 .cita-detalles {
@@ -143,13 +143,13 @@ body {
 }
 
 .cita-detalles dt {
-    color: var(--text-muted);
+    color: var(--text_muted);
     font-size: 0.85rem;
 }
 
 .cita-detalles dd {
     margin: 0.25rem 0 0;
-    color: var(--primary-color);
+    color: var(--primary_color);
     font-weight: 700;
 }
 
@@ -158,7 +158,7 @@ body {
     padding: 0.3rem 0.7rem;
     border-radius: 999px;
     background: #e7f4f2;
-    color: var(--btn-main);
+    color: var(--btn_main);
     font-size: 0.85rem;
     font-weight: 700;
 }

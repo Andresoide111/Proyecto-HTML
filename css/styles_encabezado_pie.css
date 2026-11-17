@@ -1,0 +1,81 @@
+
+.panel_anuncio {
+    background-color: var(--primary_color);
+    color: #ffffff;
+    text-align: right;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--color_claro);
+}
+
+.panel_anuncio a, .panel_anuncio span {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.panel_anuncio .icono {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+
+.encabezado {
+    background-color: var(--surface_color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--color_claro);
+    box-shadow: var(--shadow_sm);
+}
+
+.logo-hospital {
+    height: 45px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-hospital:hover {
+    transform: scale(1.02);
+}
+
+.nav-principal {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-principal a {
+    color: var(--text_color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-principal a:hover {
+    color: var(--btn_principal);
+}
+
+.acciones-usuario {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.acciones-usuario a {
+    text-decoration: none;
+    color: var(--text_color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.acciones-usuario .icono {
+    width: 20px;
+    height: 20px;
+}
