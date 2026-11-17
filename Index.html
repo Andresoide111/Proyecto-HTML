@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <!-- diseño responsivo, idth=device-width hace que se adapte a la pantalla, initica configura el zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Santa Lucía | Inicio</title>
+    <title>CMC | Inicio</title>
     <link rel="stylesheet" href="css/styles_index.css" />
 
 
@@ -16,12 +16,11 @@
         <!-- panel del anuncio -->
         <div class="panel_anuncio">
             <a><img src="assets/img/telefono.svg" alt="Icono Teléfono" class="icono"> Emergencias: +504 2234-5555 | </a>
-            <a><img src="assets/img/horario.svg" alt="Icono Horario" class="icono"> Atención: Lun–Sáb, 7:00 a.m. – 7:00
-                p.m</a>
+            <a><img src="assets/img/horario.svg" alt="Icono Horario" class="icono"> Atención: Lun–Sáb, 7:00 a.m. – 7:00 p.m</a>
         </div>
         <div class="encabezado">
             <!--logo  -->
-            <a href="Default.aspx" class="logo-link">
+            <a href="index.html" class="logo-centromedico">
                 <img src="assets/img/logo-centromedico.svg" alt="Logo Hospital Santa Lucía" class="logo-hospital"
                     height="50">
             </a>
@@ -29,10 +28,10 @@
             <nav class="nav-principal">
                 <!-- rutas relativas -->
                 <a href="index.html">Inicio</a>
-                <a href="pages/catalogo.html">Espcialidades</a>
-                <a href="pages/shopcart.html">Especialistas</a>
-                <a href="pages/contacto.html">Consultar cita</a>
-                <a href="pages/nosotros.html">Contacto</a>
+                <a href="pages/especialidades.html">Espcialidades</a>
+                <a href="pages/especialistas.html">Especialistas</a>
+                <a href="pages/consultar-cita.html">Consultar cita</a>
+                <a href="pages/contacto.html">Contacto</a>
             </nav>
 
             <div class="acciones-usuario">
@@ -40,7 +39,7 @@
                     <img src="assets/img/usuario.svg" alt="Icono Usuario" class="icono"> Inicia sesión
                 </a>
                 <button>
-                    <a class="btn-agendar" href="pages/catalogo.html">
+                    <a class="btn-agendar" href="pages/agendar-cita.html">
                         <img src="assets/img/calendario.svg" alt="calendario"> Agendar una cita
                     </a>
                 </button>
@@ -49,32 +48,30 @@
         </div>
     </header>
 
-
-    <form>
         <div class="layout">
-            </aside>
+            
             <main>
                 <section class="bannerprincipal">
                     <div class="banner-box">
                         <span class="tag">Cuidamos lo que más importa</span>
                         <h1>
-                            <p>Medicina humana.</p>
-                            <p class="text-green">Atención</p>
-                            <p class="text-green">extraordinaria.</p>
+                         Medicina humana.<br>
+                         <span class="text-green">Atención <br> extraordinaria.</span>
                         </h1>
                         <p>Un equipo médico de excelencia, tecnología moderna y la calidez que tu familia merece. Tu
                             bienestar comienza aquí.</p>
                         <br>
-                        <button">
-                            <a class="btn-agendar" href="pages/catalogo.html">Agendar una cita <img
+                        <button>
+                            <a class="btn-agendar" href="pages/agendar-cita.html">Agendar una cita <img
                                     src="assets/img/flecha.svg" alt="Flecha" class="icono-flecha"></a>
-                            </button>
+                        </button>
                     </div>
 
                     <div class="banner-box">
                         <img src="assets/img/banner-principal.jpg" alt="Imagen publicitaria" class="banner-image"
                             width="1000" height="500">
                     </div>
+
                 </section>
                 <section class="banner-white">
                     <img src="assets/img/Banner_index.jpg" alt="Imagen de productos tecnologicos" class="banner-image"
@@ -105,52 +102,8 @@
                 </section>
             </main>
         </div>
-    </form>
-    <!-- Pie de página semántico -->
-    <footer style="background-color: #0b1329; color: #ffffff; padding: 3rem 2rem 2rem 2rem; font-family: sans-serif;">
-
-        <!-- Contenedor flexible para organizar las 4 columnas de información -->
-        <div
-            style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
-
-            <!-- Columna 1: Logo y Lema -->
-            <div style="flex: 1; min-width: 200px;">
-                <img src="assets/img/logo-nexora.svg" alt="Logo Nexora"
-                    style="height: 30px; filter: brightness(0) invert(1); margin-bottom: 0.8rem;">
-                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Tecnología que mueve tu mundo.</p>
-            </div>
-
-            <!-- Columna 2: Compra con confianza -->
-            <div style="flex: 1; min-width: 200px;">
-                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">Compra con confianza</h4>
-                <ul style="list-style: none; padding: 0; margin: 0; color: #94a3b8; font-size: 0.85rem;">
-                    <li style="margin-bottom: 0.4rem;">Productos originales</li>
-                    <li>Garantía local</li>
-                </ul>
-            </div>
-
-            <!-- Columna 3: ¿Necesitas ayuda? -->
-            <div style="flex: 1; min-width: 200px;">
-                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">¿Necesitas ayuda?</h4>
-                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0 0 0.4rem 0;">soporte@nexora.hn</p>
-                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">+504 2200-9000</p>
-            </div>
-
-            <!-- Columna 4: Compra segura -->
-            <div style="flex: 1; min-width: 200px;">
-                <h4 style="font-size: 0.95rem; margin-top: 0; margin-bottom: 0.8rem;">🛡️ Compra segura</h4>
-                <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Pago cifrado y protegido</p>
-            </div>
-
-        </div>
-
-        <!-- Pie inferior con derechos de autor -->
-        <div
-            style="max-width: 1200px; margin: 2rem auto 0 auto; border-top: 1px solid #1e293b; padding-top: 1rem; text-align: center; color: #94a3b8; font-size: 0.8rem;">
-            <p style="margin: 0;">&copy; 2026 NEXORA Tech Store. Todos los derechos reservados.</p>
-        </div>
-
-    </footer>
+   
+   
 </body>
 
 </html>
