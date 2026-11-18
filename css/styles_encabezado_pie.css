@@ -21,14 +21,6 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.5;
-    padding: 0.3rem;
-}
-
     /* este es el estilo del encabezado*/
 .panel_anuncio {
     background-color: var(--primary-color);
@@ -146,7 +138,7 @@ body {
 /* div contenedor de las cuatro columnas */
 .pie_contenido {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 3rem;
