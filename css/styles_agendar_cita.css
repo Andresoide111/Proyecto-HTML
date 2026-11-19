@@ -33,12 +33,12 @@ body {
     padding: 3rem 0;
 }
 
-.titulos-pagina {
+.titulos_pagina {
     text-align: center;
     color: var(--texto_principal);
 }
 
-.titulo-pequeño {
+.titulo_pequeño {
     margin-top: 70px;
     margin-bottom: 5px;
     font-size: 13px;
@@ -48,12 +48,12 @@ body {
     display: inline-block;
 }
 
-.subtitulo-pagina {
+.subtitulo_pagina {
     font-size: 55px;
     font-family: Georgia, serif;
 }
 
-.descripcion-pagina {
+.descripcion_pagina {
     font-size: 14px;
     margin-top: 0;
 }
@@ -85,7 +85,12 @@ body {
     margin: 0;
     padding: 25px;
 }
-
+.formulario h2 {
+    margin: 0;
+    color: var(--texto_principal);
+    font-size: 30px;
+    font-family: Garamond, serif;
+}
 
 /* =========================================
    6. SECCIONES DEL FORMULARIO
@@ -96,7 +101,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 15px;
+    /* gap es el espacio entre los elementos */
+    gap: 15px; 
     width: 100%;
 }
 
@@ -110,16 +116,8 @@ body {
 .datos_paciente .fila_5,
 .datos_paciente .fila_6{
     width: 100%;
+    /* el 1/-1 significa que ocupa todas las columnas */
     grid-column: 1 / -1;
-}
-
-/* TÍTULOS DE LAS SECCIONES */
-
-.datos_paciente h2,
-.datos_cita h2 {
-    margin: 0 0 8px;
-    color: var(--texto_principal);
-    font-size: 24px;
 }
 
 
@@ -204,15 +202,14 @@ body {
 .tipo_cita input[type="radio"] {
     accent-color: var(--btn-main);
 }
-.button {
-    padding: 10px 20px;
-    background-color: var(--btn-main);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+.btn_enviar_cita {
+background:var(--btn-principal);
+color:#fff;
+border:none;
+border-radius: 5px;
+font-size:14px;
+padding: 12px 20px;
+width: 250px;
 }
 
 /* =========================================
@@ -222,10 +219,37 @@ body {
 .panel_pasos {
     background-color: var(--primary-color);
     color: white;
+    /* el padding es el espacio interior del elemento */
     padding: 35px;
-    border-radius: var(--radius);
+    border-radius: 5px;
+    gap: 30px;
+    font-family: Georgia, serif;
+    font-size: 14px;
 }
+.paso_a_paso{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.paso_1{
+   
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+.explicacion{
+     margin-bottom: 30px;
+     font-size: 14px;
 
+
+}
+.consulta{
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
 /* =========================================
    12. DISEÑO RESPONSIVE

@@ -79,22 +79,18 @@
     </header>
 
 
-    <!-- =====================================
-         2. CONTENIDO PRINCIPAL
-    ====================================== -->
-
     <main>
 
         <!-- Títulos de la página -->
-        <section class="titulos-pagina">
+        <section class="titulos_pagina">
 
-            <p class="titulo-pequeño">RESERVA EN LÍNEA</p>
+            <p class="titulo_pequeño">RESERVA EN LÍNEA</p>
 
-            <p class="subtitulo-pagina">
+            <p class="subtitulo_pagina">
                 Agenda cita médica
             </p>
 
-            <p class="descripcion-pagina">
+            <p class="descripcion_pagina">
                 Completa los datos y recibe tu comprobante de reserva al instante.
             </p>
 
@@ -117,34 +113,23 @@
 
                         <h2>Datos del paciente</h2>
 
-
-                        <!-- Fila 1: Nombre y apellido -->
+                        <!-- aqui empezamos a construir las columnas -->
                         <div class="fila_1">
 
                             <div class="campo">
 
-                                <label for="nombre">
-                                    Nombre completo:
-                                </label>
+                                <label for="nombre"> Nombre completo: </label>
 
-                                <input type="text"
-                                       id="nombre"
-                                       name="nombre"
-                                       required>
+                                <input type="text" id="nombre"name="nombre" placeholder="Escribe tu nombre" required>
 
                             </div>
 
 
                             <div class="campo">
 
-                                <label for="apellido">
-                                    Apellido:
-                                </label>
+                                <label for="apellido">Apellido:</label>
 
-                                <input type="text"
-                                       id="apellido"
-                                       name="apellido"
-                                       required>
+                                <input type="text" id="apellido"name="apellido" placeholder="Escribe tu apellido"required>
 
                             </div>
 
@@ -156,13 +141,9 @@
 
                             <div class="campo">
 
-                                <label for="genero">
-                                    Género:
-                                </label>
+                                <label for="genero"> Género: </label>
 
-                                <select id="genero"
-                                        name="genero"
-                                        required>
+                                <select id="genero" name="genero" required>
 
                                     <option value="">
                                         Seleccione un género
@@ -183,14 +164,9 @@
 
                             <div class="campo">
 
-                                <label for="fecha_nacimiento">
-                                    Fecha de nacimiento:
-                                </label>
+                                <label for="fecha_nacimiento"> Fecha de nacimiento: </label>
 
-                                <input type="date"
-                                       id="fecha_nacimiento"
-                                       name="fecha_nacimiento"
-                                       required>
+                                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Selecciona tu fecha de nacimiento"required>
 
                             </div>
 
@@ -202,28 +178,18 @@
 
                             <div class="campo">
 
-                                <label for="email_paciente">
-                                    Correo electrónico:
-                                </label>
+                                <label for="email_paciente"> Correo electrónico:</label>
 
-                                <input type="email"
-                                       id="email_paciente"
-                                       name="email"
-                                       required>
+                                <input type="email" id="email_paciente" name="email" placeholder="Escribe tu correo electrónico" required>
 
                             </div>
 
 
                             <div class="campo">
 
-                                <label for="telefono_paciente">
-                                    Teléfono:
-                                </label>
+                                <label for="telefono_paciente"> Teléfono:</label>
 
-                                <input type="tel"
-                                       id="telefono_paciente"
-                                       name="telefono"
-                                       required>
+                                <input type="tel"id="telefono_paciente"name="telefono" placeholder="Escribe tu teléfono" required>
 
                             </div>
 
@@ -231,10 +197,6 @@
 
                     </div>
 
-
-                    <!-- =====================================
-                         SECCIÓN 2: DATOS DE LA CITA
-                    ====================================== -->
 
                     <div class="datos_cita">
 
@@ -250,21 +212,13 @@
 
                                 <p>Tipo de cita</p>
 
-                                <select id="tipo"
-                                        name="tipo_cita"
-                                        required>
+                                <select id="tipo" name="tipo_cita"required>
 
-                                    <option value="">
-                                        Seleccione un tipo de cita
-                                    </option>
+                                    <option value="">Seleccione un tipo de cita</option>
 
-                                    <option value="nuevo">
-                                        Nuevo
-                                    </option>
+                                    <option value="nuevo"> Nuevo</option>
 
-                                    <option value="subsecuente">
-                                        Subsecuente
-                                    </option>
+                                    <option value="subsecuente"> Subsecuente</option>
 
                                 </select>
 
@@ -277,28 +231,18 @@
 
                                 <div class="campo">
 
-                                    <label for="especialidad">
-                                        Especialidad:
-                                    </label>
+                                    <label for="especialidad"> Especialidad: </label>
 
-                                    <input type="text"
-                                           id="especialidad"
-                                           name="especialidad"
-                                           required>
+                                    <input type="text" id="especialidad" name="especialidad" placeholder="Escribe la especialidad" required>
 
                                 </div>
 
 
                                 <div class="campo">
 
-                                    <label for="especialista">
-                                        Especialista:
-                                    </label>
+                                    <label for="especialista"> Especialista:</label>
 
-                                    <input type="text"
-                                           id="especialista"
-                                           name="especialista"
-                                           required>
+                                    <input type="text" id="especialista" name="especialista" placeholder="Escribe el nombre del especialista" required>
 
                                 </div>
 
@@ -312,28 +256,18 @@
 
                             <div class="campo">
 
-                                <label for="fecha_cita">
-                                    Fecha:
-                                </label>
+                                <label for="fecha_cita">Fecha:</label>
 
-                                <input type="date"
-                                       id="fecha_cita"
-                                       name="fecha_cita"
-                                       required>
+                                <input type="date"id="fecha_cita"name="fecha_cita"required placeholder="Selecciona la fecha de la cita">
 
                             </div>
 
 
                             <div class="campo">
 
-                                <label for="horario_cita">
-                                    Horario:
-                                </label>
+                                <label for="horario_cita"> Horario:</label>
 
-                                <input type="text"
-                                       id="horario_cita"
-                                       name="horario"
-                                       required>
+                                <input type="text"id="horario_cita"name="horario"required placeholder="Escribe el horario de la cita">
 
                             </div>
 
@@ -341,7 +275,7 @@
 
 
                         <!-- Botón para enviar -->
-                        <button type="submit">
+                        <button class="btn_enviar_cita" type="submit">
                             Agendar cita
                         </button>
 
@@ -358,16 +292,21 @@
 
             <aside class="panel_pasos">
 
-                <h2>Tu cita, paso a paso</h2>
+                <h2 class="paso_a_paso">Tu cita, paso a paso</h2>
+                <hr>
 
-                <p>1. Selecciona</p>
-                <p>Especialidad, médico y horario.</p>
+                <p class="paso_1">1. Ingresa tus datos personales</p>
+                <p class="explicacion">Usaremos esta información para identificarte.</p>
+                <hr>
 
-                <p>2. Completa tus datos</p>
-                <p>Usaremos esta información para identificarte.</p>
+                <p class="paso_1">2. Selecciona</p>
+                <p class="explicacion">Especialidad, médico y horario.</p>
+                <hr>
 
-                <p>3. Recibe tu comprobante</p>
-                <p>Guarda tu código para consultar la cita.</p>
+                <p class="paso_1">3. Recibe tu comprobante</p>
+                <p class="explicacion">Guarda tu código para consultar la cita.</p>
+                
+                <a href="../pages/consultar-cita.html" class="consulta">Ya tengo una cita</a>
 
             </aside>
 
