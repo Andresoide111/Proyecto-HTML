@@ -92,9 +92,7 @@ body {
     font-family: Garamond, serif;
 }
 
-/* =========================================
-   6. SECCIONES DEL FORMULARIO
-========================================= */
+/* SECCIONES DEL FORMULARIO */
 
 .datos_paciente,
 .datos_cita {
@@ -212,9 +210,7 @@ padding: 12px 20px;
 width: 250px;
 }
 
-/* =========================================
-   11. PANEL LATERAL
-========================================= */
+/* PANEL LATERAL*/
 
 .panel_pasos {
     background-color: var(--primary-color);
@@ -251,9 +247,7 @@ width: 250px;
     font-size: 14px;
 }
 
-/* =========================================
-   12. DISEÑO RESPONSIVE
-========================================= */
+/* DISEÑO RESPONSIVE*/
 
 @media (max-width: 768px) {
 
