@@ -4,26 +4,17 @@
 
 <head>
     <meta charset="utf-8">
-
-    <!-- Configuración responsiva -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Portal Web | Agendar Cita | Centro Médico MRV Salud</title>
-
-    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles_encabezado_pie.css">
     <link rel="stylesheet" href="../css/styles_agendar_cita.css">
 </head>
 
 <body>
 
-    <!-- =====================================
-         1. ENCABEZADO
-    ====================================== -->
-
     <header>
 
-        <!-- Panel de información -->
+    
         <div class="panel_anuncio">
 
             <a href="../pages/contacto.html">
@@ -110,9 +101,6 @@
         </section>
 
 
-        <!-- =====================================
-             3. FORMULARIO Y PANEL LATERAL
-        ====================================== -->
 
         <div class="contenedor_cita">
 
@@ -262,32 +250,24 @@
 
                                 <p>Tipo de cita</p>
 
-                                <div>
+                                <select id="tipo"
+                                        name="tipo_cita"
+                                        required>
 
-                                    <input type="radio"
-                                           id="nuevo"
-                                           name="tipo"
-                                           value="nuevo">
+                                    <option value="">
+                                        Seleccione un tipo de cita
+                                    </option>
 
-                                    <label for="nuevo">
+                                    <option value="nuevo">
                                         Nuevo
-                                    </label>
+                                    </option>
 
-                                </div>
-
-
-                                <div>
-
-                                    <input type="radio"
-                                           id="sub"
-                                           name="tipo"
-                                           value="subsecuente">
-
-                                    <label for="sub">
+                                    <option value="subsecuente">
                                         Subsecuente
-                                    </label>
+                                    </option>
 
-                                </div>
+                                </select>
+
 
                             </div>
 
