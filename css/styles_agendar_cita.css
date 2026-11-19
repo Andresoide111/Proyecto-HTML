@@ -204,7 +204,16 @@ body {
 .tipo_cita input[type="radio"] {
     accent-color: var(--btn-main);
 }
-
+.button {
+    padding: 10px 20px;
+    background-color: var(--btn-main);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
 /* =========================================
    11. PANEL LATERAL
