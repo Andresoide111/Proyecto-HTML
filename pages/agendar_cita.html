@@ -1,246 +1,541 @@
+
 <!DOCTYPE html>
-<html lang="es">    
+<html lang="es">
+
 <head>
-    <meta charset="utf-8" />
-    <!-- diseño responsivo, width=device-width hace que se adapte a la pantalla, initica configura el zoom -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portal Web|Agendar Cita|Sistema de Citas| Centro médico MRV Salud</title>
-    <link rel="stylesheet" href="../css/styles_encabezado_pie.css" />
-    <link rel="stylesheet" href="../css/styles_agendar_cita.css" />
+    <meta charset="utf-8">
 
+    <!-- Configuración responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Portal Web | Agendar Cita | Centro Médico MRV Salud</title>
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="../css/styles_encabezado_pie.css">
+    <link rel="stylesheet" href="../css/styles_agendar_cita.css">
 </head>
+
 <body>
-    <!-- ENCABEZADO -->
+
+    <!-- =====================================
+         1. ENCABEZADO
+    ====================================== -->
+
     <header>
-    <!-- Panel de información -->
-    <div class="panel_anuncio">
 
-        <a href="../pages/contacto.html">
-            <img src="../assets/img/telefono.svg"
-                 alt="Icono teléfono"
-                 class="icono">
-            Emergencias: +504 2234-5555 |
-        </a>
+        <!-- Panel de información -->
+        <div class="panel_anuncio">
 
-        <a href="#">
-            <img src="../assets/img/horario.svg"
-                 alt="Icono horario"
-                 class="icono">
-            Atención: Lun–Sáb, 7:00 a.m. – 7:00 p.m.
-        </a>
-
-    </div>
-
-    <!-- Encabezado principal -->
-    <div class="encabezado">
-
-        <!-- Logo -->
-        <a href="index.html" class="logo-centromedico">
-            <img src="../assets/img/logo-centromedico.svg"
-                 alt="Logo Centro Médico MRV Salud"
-                 class="logo-hospital"
-                 height="50">
-        </a>
-
-        <!-- Menú de navegación -->
-        <nav class="nav-principal">
-            <a href="../index.html">Inicio</a>
-            <a href="pages/especialidades.html">Especialidades</a>
-            <a href="pages/especialistas.html">Especialistas</a>
-            <a href="pages/consultar-cita.html">Consultar cita</a>
-            <a href="pages/contacto.html">Contacto</a>
-        </nav>
-
-        <!-- acciones del usuario -->
-        <div class="acciones-usuario">
-            <a class="btn-agendar"
-               href="../pages/agendar_cita.html">
-                <img src="../assets/img/calendario.svg"
-                     alt=" logo calendario"
+            <a href="../pages/contacto.html">
+                <img src="../assets/img/telefono.svg"
+                     alt="Icono teléfono"
                      class="icono">
-                Agendar una cita
+                Emergencias: +504 2234-5555 |
             </a>
-            <a class="btn-login" href="pages/login.html">
-                <img src="../assets/img/usuario.svg"
-                     alt="Icono usuario"
+
+            <a href="#">
+                <img src="../assets/img/horario.svg"
+                     alt="Icono horario"
                      class="icono">
-                Inicia sesión
+                Atención: Lun–Sáb, 7:00 a.m. – 7:00 p.m.
             </a>
 
         </div>
 
-    </div>
-</header>
+        <!-- Encabezado principal -->
+        <div class="encabezado">
 
+            <!-- Logo -->
+            <a href="../index.html" class="logo-centromedico">
+                <img src="../assets/img/logo-centromedico.svg"
+                     alt="Logo Centro Médico MRV Salud"
+                     class="logo-hospital"
+                     height="50">
+            </a>
 
+            <!-- Menú de navegación -->
+            <nav class="nav-principal">
 
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/especialidades.html">Especialidades</a>
+                <a href="../pages/especialistas.html">Especialistas</a>
+                <a href="../pages/consultar-cita.html">Consultar cita</a>
+                <a href="../pages/contacto.html">Contacto</a>
 
+            </nav>
 
+            <!-- Acciones del usuario -->
+            <div class="acciones-usuario">
 
-<main>
-   <section class="titulos-pagina">  
-    
-    <p class="titulo-pequeño">RESERVA EN LÍNEA</p>
-    <p class="subtitulo-pagina">Agenda cita médica</p>
-    <p class="descripcion-pagina">Completa los datos y recibe tu comprobante de reserva al instante. </p>
-   </section>
+                <a class="btn-agendar" href="../pages/agendar_cita.html">
+                    <img src="../assets/img/calendario.svg"
+                         alt="Icono calendario"
+                         class="icono">
+                    Agendar una cita
+                </a>
 
-    <form class="formulario_cita">
+                <a class="btn-login" href="../pages/login.html">
+                    <img src="../assets/img/usuario.svg"
+                         alt="Icono usuario"
+                         class="icono">
+                    Inicia sesión
+                </a>
 
-    <div class="formulario">
-        
-        <!-- SECCIÓN 1: DATOS DEL PACIENTE -->
-        <div class="datos_paciente">
-           <h2>Datos del paciente</h2>
-
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-            
-            <label for="genero">Género:</label>
-            <select id="genero" name="genero" required>
-                <option value="">Seleccione un género</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-            </select>
-            
-            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
-
-            <label for="email_paciente">Correo electrónico:</label>
-            <input type="email" id="email_paciente" name="email" required>
-
-            <label for="telefono_paciente">Teléfono:</label>
-            <input type="tel" id="telefono_paciente" name="telefono" required>
-        </div>
-
-        <!-- SECCIÓN 2: DATOS DE LA CITA -->
-        <div class="datos_cita">
-            <h2>Datos de la cita</h2>
-            
-            <div class="tipo_cita">
-                <p>Tipo de cita</p>
-                <div>
-                   <input type="radio" id="nuevo" name="tipo" value="nuevo">
-                   <label for="nuevo">Nuevo</label>
-                </div>
-                <div>
-                   <input type="radio" id="sub" name="tipo" value="subsecuente">
-                   <label for="sub">Subsecuente</label>
-                </div>
             </div>
 
-            <label for="especialidad">Especialidad:</label>
-            <input type="text" id="especialidad" name="especialidad" required>
-
-            <label for="especialista">Especialista:</label>
-            <input type="text" id="especialista" name="especialista" required>
-
-            <label for="fecha_cita">Fecha:</label>
-            <input type="date" id="fecha_cita" name="fecha_cita" required>
-
-            <label for="horario_cita">Horario:</label>
-            <input type="text" id="horario_cita" name="horario" required>
-
-            <button type="submit">Agendar cita</button>
         </div>
 
-    </div>
-</form>
+    </header>
 
 
-</main>
+    <!-- =====================================
+         2. CONTENIDO PRINCIPAL
+    ====================================== -->
 
+    <main>
 
+        <!-- Títulos de la página -->
+        <section class="titulos-pagina">
 
+            <p class="titulo-pequeño">RESERVA EN LÍNEA</p>
 
+            <p class="subtitulo-pagina">
+                Agenda cita médica
+            </p>
 
-
-
-
-
-
-
-
-
-
-
-<!-- AQUI INICIA EL PIE DE PAGINA -->
- <footer class="pie_pagina">
-
-    <div class="pie_contenido">
-
-        <!-- cada columna es un section aqui, pero se define la posicion en el css -->
-        <section class="pie_identidad">
-
-            <a href="index.html" class="logo_pie">
-                <span class="icono_logo">+</span>
-
-                <span class="nombre_centro">
-                    <strong>MRV Salud</strong>
-                    <small>HOSPITAL & CENTRO MÉDICO</small>
-                </span>
-            </a>
-
-            <p>
-                Medicina de excelencia con la calidez y cercanía
-                que cada persona merece.
+            <p class="descripcion-pagina">
+                Completa los datos y recibe tu comprobante de reserva al instante.
             </p>
 
         </section>
 
-        <!-- section 2 -->
-        <section class="pie_columna">
-            <h3>PORTAL</h3>
 
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/especialidades.html">Especialidades</a></li>
-                <li><a href="pages/especialistas.html">Especialistas</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </section>
+        <!-- =====================================
+             3. FORMULARIO Y PANEL LATERAL
+        ====================================== -->
 
-        <!-- section 3 -->
-        <section class="pie_columna">
-            <h3>PACIENTES</h3>
+        <div class="contenedor_cita">
 
-            <ul>
-                <li><a href="pages/agendar-cita.html">Agendar cita</a></li>
-                <li><a href="pages/consultar-cita.html">Consultar cita</a></li>
-            </ul>
-        </section>
 
-        <!-- section 4 -->
-        <section class="pie_columna">
-            <h3>CONTACTO</h3>
+            <!-- FORMULARIO -->
+            <form class="formulario_cita">
 
-            <ul>
-                <li><a href="tel:+50422345555">+504 2234-5555</a></li>
-                <li><a href="mailto:atencion@mrv_salud.hn">atencion@mrv_salud.hn</a></li>
-                <li>Tegucigalpa, Honduras</li>
-            </ul>
-        </section>
+                <div class="formulario">
 
-    </div>
 
-    <!-- Parte inferior -->
-    <div class="pie_inferior">
+                    <!-- SECCIÓN 1: DATOS DEL PACIENTE -->
 
-        <p>
-            &copy; 2026 Centro médico MRV Salud.
-            Todos los derechos reservados.
-        </p>
+                    <div class="datos_paciente">
 
-        <div class="enlaces-legales">
-            <a href="#">Privacidad</a>
-            <a href="#">Términos de uso</a>
+                        <h2>Datos del paciente</h2>
+
+
+                        <!-- Fila 1: Nombre y apellido -->
+                        <div class="fila_1">
+
+                            <div class="campo">
+
+                                <label for="nombre">
+                                    Nombre completo:
+                                </label>
+
+                                <input type="text"
+                                       id="nombre"
+                                       name="nombre"
+                                       required>
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="apellido">
+                                    Apellido:
+                                </label>
+
+                                <input type="text"
+                                       id="apellido"
+                                       name="apellido"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Fila 2: Género y fecha de nacimiento -->
+                        <div class="fila_2">
+
+                            <div class="campo">
+
+                                <label for="genero">
+                                    Género:
+                                </label>
+
+                                <select id="genero"
+                                        name="genero"
+                                        required>
+
+                                    <option value="">
+                                        Seleccione un género
+                                    </option>
+
+                                    <option value="masculino">
+                                        Masculino
+                                    </option>
+
+                                    <option value="femenino">
+                                        Femenino
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="fecha_nacimiento">
+                                    Fecha de nacimiento:
+                                </label>
+
+                                <input type="date"
+                                       id="fecha_nacimiento"
+                                       name="fecha_nacimiento"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Fila 3: Correo y teléfono -->
+                        <div class="fila_3">
+
+                            <div class="campo">
+
+                                <label for="email_paciente">
+                                    Correo electrónico:
+                                </label>
+
+                                <input type="email"
+                                       id="email_paciente"
+                                       name="email"
+                                       required>
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="telefono_paciente">
+                                    Teléfono:
+                                </label>
+
+                                <input type="tel"
+                                       id="telefono_paciente"
+                                       name="telefono"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         SECCIÓN 2: DATOS DE LA CITA
+                    ====================================== -->
+
+                    <div class="datos_cita">
+
+                        <h2>Datos de la cita</h2>
+
+
+                        <!-- Fila 4: Tipo de cita y especialidades -->
+                        <div class="fila_6">
+
+
+                            <!-- Tipo de cita -->
+                            <div class="campo tipo_cita">
+
+                                <p>Tipo de cita</p>
+
+                                <div>
+
+                                    <input type="radio"
+                                           id="nuevo"
+                                           name="tipo"
+                                           value="nuevo">
+
+                                    <label for="nuevo">
+                                        Nuevo
+                                    </label>
+
+                                </div>
+
+
+                                <div>
+
+                                    <input type="radio"
+                                           id="sub"
+                                           name="tipo"
+                                           value="subsecuente">
+
+                                    <label for="sub">
+                                        Subsecuente
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Especialidad y especialista -->
+                            <div class="fila_7">
+
+                                <div class="campo">
+
+                                    <label for="especialidad">
+                                        Especialidad:
+                                    </label>
+
+                                    <input type="text"
+                                           id="especialidad"
+                                           name="especialidad"
+                                           required>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="especialista">
+                                        Especialista:
+                                    </label>
+
+                                    <input type="text"
+                                           id="especialista"
+                                           name="especialista"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Fila 5: Fecha y horario -->
+                        <div class="fila_8">
+
+                            <div class="campo">
+
+                                <label for="fecha_cita">
+                                    Fecha:
+                                </label>
+
+                                <input type="date"
+                                       id="fecha_cita"
+                                       name="fecha_cita"
+                                       required>
+
+                            </div>
+
+
+                            <div class="campo">
+
+                                <label for="horario_cita">
+                                    Horario:
+                                </label>
+
+                                <input type="text"
+                                       id="horario_cita"
+                                       name="horario"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Botón para enviar -->
+                        <button type="submit">
+                            Agendar cita
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+
+            <!-- =====================================
+                 4. PANEL LATERAL
+            ====================================== -->
+
+            <aside class="panel_pasos">
+
+                <h2>Tu cita, paso a paso</h2>
+
+                <p>1. Selecciona</p>
+                <p>Especialidad, médico y horario.</p>
+
+                <p>2. Completa tus datos</p>
+                <p>Usaremos esta información para identificarte.</p>
+
+                <p>3. Recibe tu comprobante</p>
+                <p>Guarda tu código para consultar la cita.</p>
+
+            </aside>
+
         </div>
 
-    </div>
+    </main>
 
-</footer>
+
+    <!-- =====================================
+         5. PIE DE PÁGINA
+    ====================================== -->
+
+    <footer class="pie_pagina">
+
+        <div class="pie_contenido">
+
+
+            <!-- Columna 1: Identidad -->
+            <section class="pie_identidad">
+
+                <a href="../index.html" class="logo_pie">
+
+                    <span class="icono_logo">+</span>
+
+                    <span class="nombre_centro">
+
+                        <strong>MRV Salud</strong>
+
+                        <small>HOSPITAL & CENTRO MÉDICO</small>
+
+                    </span>
+
+                </a>
+
+                <p>
+                    Medicina de excelencia con la calidez y cercanía
+                    que cada persona merece.
+                </p>
+
+            </section>
+
+
+            <!-- Columna 2: Portal -->
+            <section class="pie_columna">
+
+                <h3>PORTAL</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="../pages/especialidades.html">
+                            Especialidades
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../pages/especialistas.html">
+                            Especialistas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../pages/contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- Columna 3: Pacientes -->
+            <section class="pie_columna">
+
+                <h3>PACIENTES</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="../pages/agendar_cita.html">
+                            Agendar cita
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../pages/consultar-cita.html">
+                            Consultar cita
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- Columna 4: Contacto -->
+            <section class="pie_columna">
+
+                <h3>CONTACTO</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="tel:+50422345555">
+                            +504 2234-5555
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:atencion@mrv_salud.hn">
+                            atencion@mrv_salud.hn
+                        </a>
+                    </li>
+
+                    <li>
+                        Tegucigalpa, Honduras
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </div>
+
+
+        <!-- Parte inferior del pie de página -->
+        <div class="pie_inferior">
+
+            <p>
+                &copy; 2026 Centro médico MRV Salud.
+                Todos los derechos reservados.
+            </p>
+
+            <div class="enlaces-legales">
+
+                <a href="#">Privacidad</a>
+                <a href="#">Términos de uso</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>

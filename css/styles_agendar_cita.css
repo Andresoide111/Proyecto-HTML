@@ -1,3 +1,5 @@
+
+
 :root {
     --primary-color: #17313B;
     --btn-main: #0F7772;
@@ -31,82 +33,140 @@ body {
     padding: 3rem 0;
 }
 
-
-
 .titulos-pagina {
-    text-align: center; 
+    text-align: center;
     color: var(--texto_principal);
-
 }
 
 .titulo-pequeño {
     margin-top: 70px;
     margin-bottom: 5px;
     font-size: 13px;
-    
     letter-spacing: 2px;
-    /* esto es para que se dibuje una linea sibre el texto*/
-    border-top: 1px solid #0d3434; 
-    padding-top: 8px; 
-    
-    /* esta linea combina las propiedades de inline con las de un bloque, esto es para que 
-    respete el text-align center del padre */
-    display: inline-block; 
+    border-top: 1px solid #0d3434;
+    padding-top: 8px;
+    display: inline-block;
 }
+
 .subtitulo-pagina {
     font-size: 55px;
     font-family: Georgia, serif;
 }
+
 .descripcion-pagina {
     font-size: 14px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
-/*  estilo de el formulario y la tarjeta oscura de la par */
-/* contenedor que pone el formulario a la izquierda y la tarjeta a la derecha */
+
+/*  DISTRIBUCIÓN GENERAL DEL FORMULARIO*/
+
+.contenedor_cita {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+/* FORMULARIO IZQUIERDO */
+
 .formulario_cita {
-  margin-top: 30px;
-  background-color: var(--surface-color);
-  border-radius: var(--radius);
-  
-  .formulario {
+    width: 100%;
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+}
+
+.formulario {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 100%;
-    max-width: 500px; /* Ajusta este ancho a tu gusto */
-    margin: 0 auto;   /* Esto empuja toda la caja hacia el centro */
+    margin: 0;
+    padding: 25px;
 }
 
-  /* activa una cuadrícula */
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* divide en 3/3 2 partes para el form, 1 parte para el cuadro oscuro */
- /* separacion entre columnas */
-  gap: 40px;
-  align-items: start; /* no deja que la tarjeta oscura se estire innecesariamente */
-}
-/* 2. Estilo para agrupar cada sección de datos */
-.datos_paciente, 
+
+/* =========================================
+   6. SECCIONES DEL FORMULARIO
+========================================= */
+
+.datos_paciente,
 .datos_cita {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Espacio vertical entre cada etiqueta e input */
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
 }
 
-/* 3. Estilo para las etiquetas (labels) */
+/* Evita que las filas se desplacen */
+
+.datos_paciente h2,
+.datos_paciente .fila_1,
+.datos_paciente .fila_2,
+.datos_paciente .fila_3,
+.datos_paciente .fila_4,
+.datos_paciente .fila_5,
+.datos_paciente .fila_6{
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+/* TÍTULOS DE LAS SECCIONES */
+
+.datos_paciente h2,
+.datos_cita h2 {
+    margin: 0 0 8px;
+    color: var(--texto_principal);
+    font-size: 24px;
+}
+
+
+/* Dos columnas para agrupar los campos */
+
+.fila_1,
+.fila_2,
+.fila_3,
+.fila_4,
+.fila_5,
+.fila_6,
+.fila_7,
+.fila_8,
+.fila_9,
+.fila_10,
+.fila_11 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* ETIQUETAS */
+
 .formulario label {
     font-size: 13px;
     font-weight: 600;
-    color: var(--text-color, #102a36);
+    color: var(--text-color);
 }
 
-/* 4. Estilo unificado para todos los inputs y selects */
+
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario input[type="tel"],
 .formulario input[type="date"],
 .formulario select {
-    padding: 12px 15px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 10px 12px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
     font-size: 14px;
@@ -116,25 +176,86 @@ body {
     transition: border-color 0.2s;
 }
 
-/* Efecto al hacer clic en un input */
+/* EFECTO AL SELECCIONAR UN CAMPO */
+
 .formulario input:focus,
 .formulario select:focus {
-    border-color: #0d3434; /* Color de línea al seleccionar */
-}
-
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-.formulario input[type="date"],
-.formulario select {
-    padding: 10px 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    font-size: 14px;
-    width: 100%;
-    max-width: 450px; /* Ajusta este valor para hacerlos más cortos */
+    border-color: var(--btn-main);
 }
 
 
 
+.tipo_cita {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tipo_cita p {
+    margin: 0;
+}
+
+.tipo_cita div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tipo_cita input[type="radio"] {
+    accent-color: var(--btn-main);
+}
+
+
+/* =========================================
+   11. PANEL LATERAL
+========================================= */
+
+.panel_pasos {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 35px;
+    border-radius: var(--radius);
+}
+
+
+/* =========================================
+   12. DISEÑO RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Formulario y panel en una sola columna */
+
+    .contenedor_cita {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Campos uno debajo del otro */
+
+    .fila_1,
+    .fila_2,
+    .fila_3,
+    .fila_4,
+    .fila_5,
+    .fila_6,
+    .fila_7,
+    .fila_8,
+    .fila_9,
+    .fila_10,
+    .fila_11 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Ajuste del título principal */
+
+    .subtitulo-pagina {
+        font-size: 38px;
+    }
+
+    .formulario {
+        padding: 18px;
+    }
+
+}
