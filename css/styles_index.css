@@ -13,7 +13,6 @@
     --radius: 8px;                  /* Bordes redondeados estándar */
 }
 
-/* Corrección del selector universal */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,15 +24,22 @@ body {
     background-color: var(--bg_color);
     color: var(--text_color);
     line-height: 1.5;
+    overflow-x: hidden; /* Evita scroll horizontal accidental */
+}
+
+/* Limita el ancho en pantallas muy grandes (monitores 2K/4K) */
+main {
+    max-width: 1480px;
+    margin: 0;
 }
 
 /* ---------------------- BANNER PRINCIPAL ---------------------- */
 .bannerprincipal {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 2rem;
+    padding: 3rem 2.5rem;
     background-color: var(--surface_color);
     margin: 1.5rem;
     border-radius: var(--radius);
@@ -42,10 +48,12 @@ body {
 
 .banner-box {
     flex: 1;
+    min-width: 0; /* Evita desbordamientos en flexbox */
 }
 
 .banner-box h1 {
-    font-size: 2.8rem;
+    /* Escala fluida entre 2rem (móvil) y 2.8rem (escritorio) */
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
     line-height: 1.15;
     color: var(--primary_color);
     margin: 1rem 0;
@@ -76,9 +84,9 @@ body {
 .banner-botones {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    flex-wrap: wrap; /* Permite que bajen de línea si no caben */
+    gap: 1.2rem 1.5rem;
     margin-bottom: 2.5rem;
-    
 }
 
 .enlace-secundario {
@@ -96,6 +104,7 @@ body {
     background-color: var(--btn_principal);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     color: #ffffff;
     border: none;
@@ -122,13 +131,14 @@ body {
 /* Estadísticas dentro del Banner */
 .estadisticas {
     display: flex;
-    gap: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
     border-top: 1px solid var(--color_claro);
     padding-top: 1.5rem;
 }
 
 .stat-item h3 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
     color: var(--primary_color);
 }
 
@@ -141,6 +151,7 @@ body {
 /* Imagen derecha con tarjeta flotante */
 .imagen-derecha {
     position: relative;
+    width: 100%;
 }
 
 .banner-image {
@@ -153,8 +164,10 @@ body {
 
 .floating-card {
     position: absolute;
-    bottom: 25px;
-    left: 25px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: fit-content;
     background: var(--surface_color);
     padding: 12px 18px;
     border-radius: var(--radius);
@@ -167,6 +180,7 @@ body {
 .floating-card .icono {
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 }
 
 .floating-card strong {
@@ -183,8 +197,9 @@ body {
 /* ---------------------- ACCESOS RÁPIDOS ---------------------- */
 .accesos-rapidos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    /* Se adapta automáticamente de 3 columnas a 2 y luego a 1 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
     margin: 0 1.5rem 2rem 1.5rem;
 }
 
@@ -196,13 +211,17 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-acceso:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow_md);
+}
+
+.card-acceso > div:nth-child(2) {
+    flex: 1; /* Empuja la flecha hacia la derecha de forma uniforme */
 }
 
 .card-acceso div h4 {
@@ -224,6 +243,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .card-icon img {
@@ -253,7 +273,7 @@ body {
 }
 
 .seccion-header h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--primary_color);
     margin: 0.5rem 0 1rem 0;
 }
@@ -265,7 +285,8 @@ body {
 
 .grid-especialidades {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en desktop, 2 en tablet, 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2.5rem;
 }
@@ -276,11 +297,14 @@ body {
     border-radius: var(--radius);
     text-align: left;
     border: 1px solid var(--color_claro);
-    transition: border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card-especialidad:hover {
     border-color: var(--btn_principal);
+    transform: translateY(-2px);
 }
 
 .icono-esp img {
@@ -299,6 +323,7 @@ body {
     font-size: 0.85rem;
     color: var(--text_muted);
     margin-bottom: 1.5rem;
+    flex-grow: 1; /* Alinea todos los enlaces inferiores al mismo nivel */
 }
 
 .enlace-card {
@@ -306,6 +331,7 @@ body {
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
+    align-self: flex-start;
 }
 
 .enlace-card:hover {
@@ -342,6 +368,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     box-shadow: var(--shadow_md);
 }
 
@@ -359,7 +386,7 @@ body {
 
 .cta-contenido h2 {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     margin-top: 0.5rem;
 }
 
@@ -372,9 +399,95 @@ body {
     font-weight: 600;
     font-size: 0.95rem;
     display: inline-block;
+    white-space: nowrap;
     transition: background-color 0.2s;
 }
 
 .btn-white:hover {
     background-color: var(--bg_color);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Tablets y Móviles)
+   ========================================================================== */
+
+/* Tablets y Laptops pequeñas (hasta 992px) */
+@media (max-width: 992px) {
+    .bannerprincipal {
+        flex-direction: column;
+        padding: 2.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .banner-image {
+        height: 350px;
+    }
+
+    .banner-dark-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* Móviles grandes y Tablets verticales (hasta 768px) */
+@media (max-width: 768px) {
+    .bannerprincipal,
+    .seccion-especialidades,
+    .banner-dark-cta {
+        margin: 1rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .accesos-rapidos {
+        margin: 0 1rem 1.5rem 1rem;
+    }
+
+    .banner-image {
+        height: 280px;
+    }
+
+    .estadisticas {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .banner-botones {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .btn-agendar,
+    .btn-white,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .estadisticas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    /* Hace que el tercer elemento de estadísticas ocupe todo el ancho abajo */
+    .estadisticas .stat-item:last-child {
+        grid-column: span 2;
+    }
+
+    .floating-card {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
+        padding: 10px 14px;
+    }
+
+    .banner-image {
+        height: 240px;
+    }
 }
