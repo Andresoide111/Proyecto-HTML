@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- Indica que usamos HTML5 -->
+<html lang="es">
+
+<head>
+    <!-- Permite tildes y caracteres en español -->
+    <meta charset="utf-8">
+    <!-- Adapta la vista a pantallas de celular y computadora -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Título de la pestaña -->
+    <title>MRV SALUD | Catálogo de Especialidades</title>
+    <!-- Estilos compartidos de encabezado y pie de página -->
+    <link rel="stylesheet" href="../css/styles_encabezado_pie.css">
+    <!-- Estilos propios de la página de especialidades -->
+    <link rel="stylesheet" href="../css/styles_especialidades.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+
+        <!-- Barra superior con emergencias y horario -->
+        <div class="panel_anuncio">
+            <a href="../pages/contacto.html">
+                <img src="../assets/img/telefono.svg" alt="Icono teléfono" class="icono">
+                Emergencias: +504 2234-5555 |
+            </a>
+
+            <a href="#">
+                <img src="../assets/img/horario.svg" alt="Icono horario" class="icono">
+                Atención: Lun–Sáb, 7:00 a.m. – 7:00 p.m.
+            </a>
+        </div>
+
+        <!-- Barra con logo, menú de navegación y botones -->
+        <div class="encabezado">
+            <!-- Logo del centro médico -->
+            <a href="../index.html" class="logo-centromedico">
+                <img src="../assets/img/logo-centromedico.svg" alt="Logo Centro Médico MRV Salud" class="logo-hospital" height="50">
+            </a>
+
+            <!-- Menú principal -->
+            <nav class="nav-principal">
+                <a href="../index.html">Inicio</a>
+                <a href="../pages/especialidades.html">Especialidades</a>
+                <a href="../pages/especialistas.html">Especialistas</a>
+                <a href="../pages/consultar-cita.html">Consultar cita</a>
+                <a href="../pages/contacto.html">Contacto</a>
+            </nav>
+
+            <!-- Botones de acción -->
+            <div class="acciones-usuario">
+                <a class="btn-agendar" href="../pages/agendar_cita.html">
+                    <img src="../assets/img/calendario.svg" alt="Icono calendario" class="icono">
+                    Agendar una cita
+                </a>
+
+                <a class="btn-login" href="../pages/login.html">
+                    <img src="../assets/img/usuario.svg" alt="Icono usuario" class="icono">
+                    Inicia sesión
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Contenedor principal de especialidades -->
+        <section class="pagina-especialidades">
+
+            <!-- Encabezado de la sección -->
+            <div class="encabezado-pagina">
+                <span class="tag">CATÁLOGO DE ESPECIALIDADES</span>
+                <h1>Servicios y áreas de atención</h1>
+                <p>Desglose de especialidades médicas, alcance de atención y requisitos para los pacientes.</p>
+            </div>
+
+            <!-- Lista desordenada con las áreas de atención -->
+            <div class="bloque-lista">
+                <h2>Áreas de atención</h2>
+                <ul class="lista-especialidades">
+                    <li>Medicina General</li>
+                    <li>Pediatría</li>
+                    <li>Odontología</li>
+                    <li>Ginecología</li>
+                    <li>Cardiología</li>
+                </ul>
+            </div>
+
+            <!-- Lista de definición con alcance y requisitos por especialidad -->
+            <div class="bloque-detalle">
+                <h2>Alcance y requisitos por especialidad</h2>
+
+                <dl class="detalle-especialidades">
+                    <!-- Especialidad 1 -->
+                    <dt>Medicina General</dt>
+                    <dd><strong>Alcance:</strong> Diagnóstico inicial, tratamiento de enfermedades comunes, control preventivo y referencia médica.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar documento de identidad y llegar 15 minutos antes de la cita.</dd>
+
+                    <!-- Especialidad 2 -->
+                    <dt>Pediatría</dt>
+                    <dd><strong>Alcance:</strong> Control de crecimiento y desarrollo, atención de cuadros febriles o respiratorios y seguimiento infantil.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar carnet de vacunación actualizado y partida de nacimiento o identificación del responsable.</dd>
+
+                    <!-- Especialidad 3 -->
+                    <dt>Odontología</dt>
+                    <dd><strong>Alcance:</strong> Evaluación bucal, limpiezas dentales, obturaciones, extracciones simples y prevención oral.</dd>
+                    <dd><strong>Requisitos:</strong> Contar con cita programada y asistir con higiene bucal previa.</dd>
+
+                    <!-- Especialidad 4 -->
+                    <dt>Ginecología</dt>
+                    <dd><strong>Alcance:</strong> Chequeos ginecológicos preventivos, orientación en salud femenina y seguimiento clínico.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar identificación y traer exámenes o controles médicos anteriores si aplica.</dd>
+
+                    <!-- Especialidad 5 -->
+                    <dt>Cardiología</dt>
+                    <dd><strong>Alcance:</strong> Evaluación cardiovascular, control de presión arterial y seguimiento de factores de riesgo cardíaco.</dd>
+                    <dd><strong>Requisitos:</strong> Llegar 30 minutos antes para toma de signos vitales y traer resultados previos si los tiene.</dd>
+                </dl>
+
+                <!-- Botón hacia agendamiento -->
+                <div class="acciones-especialidades">
+                    <a class="btn-agendar" href="../pages/agendar_cita.html">Agendar una cita</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie_pagina">
+
+        <div class="pie_contenido">
+
+            <!-- Columna 1: Identidad -->
+            <section class="pie_identidad">
+                <a href="../index.html" class="logo_pie">
+                    <span class="icono_logo">+</span>
+                    <span class="nombre_centro">
+                        <strong>MRV Salud</strong>
+                        <small>HOSPITAL & CENTRO MÉDICO</small>
+                    </span>
+                </a>
+                <p>
+                    Medicina de excelencia con la calidez y cercanía
+                    que cada persona merece.
+                </p>
+            </section>
+
+            <!-- Columna 2: Portal -->
+            <section class="pie_columna">
+                <h3>PORTAL</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/especialidades.html">Especialidades</a></li>
+                    <li><a href="../pages/especialistas.html">Especialistas</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+
+            <!-- Columna 3: Pacientes -->
+            <section class="pie_columna">
+                <h3>PACIENTES</h3>
+                <ul>
+                    <li><a href="../pages/agendar_cita.html">Agendar cita</a></li>
+                    <li><a href="../pages/consultar-cita.html">Consultar cita</a></li>
+                </ul>
+            </section>
+
+            <!-- Columna 4: Contacto -->
+            <section class="pie_columna">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li><a href="tel:+50422345555">+504 2234-5555</a></li>
+                    <li><a href="mailto:atencion@mrv_salud.hn">atencion@mrv_salud.hn</a></li>
+                    <li>Honduras</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Parte inferior -->
+        <div class="pie_inferior">
+            <p>
+                &copy; 2026 Centro médico MRV Salud.
+                Todos los derechos reservados.
+            </p>
+
+            <div class="enlaces-legales">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos de uso</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

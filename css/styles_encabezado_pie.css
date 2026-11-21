@@ -1,4 +1,5 @@
 :root {
+<<<<<<< Updated upstream
     --primary-color: #17313B;       /* Texto Principal */
     --btn-main: #0F7772;            /* Botones hover */
     --btn-principal: #168C86;       /* Botón principal */
@@ -18,6 +19,25 @@
 *,
 *::before,
 *::after {
+=======
+    /*  */
+    --primary-color: #17313B;       /* Texto Principal  */
+    --btn-main: #0F7772;            /* Botones */
+    --btn-principal: #168C86;       /*  botón principal */
+    --bg-color: #F4F5F0;            /* Fondo Principal */
+    --surface-color: #ffffff;       /* Tarjetas/formularios */
+    --text-color: #0f172a;          /* Texto Principal */
+    --text-muted: #63767C;          /* Texto Secundario  */
+    --color-claro: #e2e8f0;        /* Bordes  */
+    --pie-color: #0B3040;        /* fondo pie de pagina  */
+    
+    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --radius: 8px;                  /* Bordes redondeados estándar */
+}
+
+* {
+>>>>>>> Stashed changes
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -28,6 +48,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.5;
+<<<<<<< Updated upstream
     overflow-x: hidden;
 }
 
@@ -57,10 +78,24 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 0.65rem;
+=======
+    padding: 0.3rem;
+}
+
+    /* este es el estilo del encabezado*/
+.panel_anuncio {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: right;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+>>>>>>> Stashed changes
 }
 
 .panel_anuncio a {
     color: #ffffff;
+<<<<<<< Updated upstream
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -103,6 +138,21 @@ body {
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
+=======
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+/* Contenedor flexible para alinear en 1 sola fila */
+.encabezado{
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: space-between; /* Separa Logo, Menú e Iconos a los extremos */
+    align-items: center;            /* Centra todo verticalmente */
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+>>>>>>> Stashed changes
 }
 
 .logo-hospital {
@@ -113,6 +163,7 @@ body {
 }
 
 .logo-hospital:hover {
+<<<<<<< Updated upstream
     transform: scale(1.02);
 }
 
@@ -121,6 +172,16 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+=======
+    /*  */
+    transform: scale(1.02); 
+}
+
+/* menú de navegación centrado */
+.nav-principal {
+    display: flex;
+    gap: 1.5rem; /* espacio uniforme entre enlaces */
+>>>>>>> Stashed changes
 }
 
 .nav-principal a {
@@ -128,19 +189,30 @@ body {
     font-weight: 500;
     font-size: 0.95rem;
     text-decoration: none;
+<<<<<<< Updated upstream
     white-space: nowrap;
+=======
+>>>>>>> Stashed changes
     transition: color 0.2s ease;
 }
 
 .nav-principal a:hover {
+<<<<<<< Updated upstream
     color: var(--btn-principal);
 }
 
 /* Acciones de usuario */
+=======
+    color: var(--text-muted);
+}
+
+/* Iconos de la derecha */
+>>>>>>> Stashed changes
 .acciones-usuario {
     display: flex;
     align-items: center;
     gap: 1rem;
+<<<<<<< Updated upstream
     flex-shrink: 0;
 }
 
@@ -160,10 +232,36 @@ body {
     border-radius: 6px;
     cursor: pointer;
     white-space: nowrap;
+=======
+}
+
+.acciones-usuario .icono {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.acciones-usuario .icono:hover {
+    transform: scale(1.1); /* Efecto sutil al pasar el cursor */
+}
+.btn-agendar {
+    background-color: var(--btn-principal);
+    display: inline-block;
+    color: var(--bg-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+>>>>>>> Stashed changes
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-agendar:hover {
+<<<<<<< Updated upstream
     background-color: var(--btn-main);
     transform: translateY(-2px);
 }
@@ -179,10 +277,22 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
+=======
+    background-color: var(--btn-main); /* Tono más oscuro al posar el cursor */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    /* este es el espacio entre los iconos y el texto */
+    gap: 0.4rem; 
+>>>>>>> Stashed changes
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
+<<<<<<< Updated upstream
     white-space: nowrap;
     padding: 0.5rem 0;
     transition: color 0.2s ease;
@@ -233,10 +343,26 @@ body {
     padding: 3rem 1.5rem 1.2rem;
 }
 
+=======
+    padding: 0.7rem 0;
+}
+/* AQUI TERMINA EL ENCABEZADO */
+
+
+/* PIE DE PÁGINA */
+.pie_pagina {
+    background-color: var(--pie-color);
+    color: #ffffff;
+    padding: 3rem 2rem 1.2rem;
+}
+
+/* div contenedor de las cuatro columnas */
+>>>>>>> Stashed changes
 .pie_contenido {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
+<<<<<<< Updated upstream
     grid-template-columns: 1.5fr repeat(3, 1fr);
     gap: 2.5rem;
     padding-bottom: 2.5rem;
@@ -246,6 +372,18 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
+=======
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.logo_pie {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+>>>>>>> Stashed changes
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 1.2rem;
@@ -256,13 +394,20 @@ body {
     height: 45px;
     background-color: #159B94;
     border-radius: 50%;
+<<<<<<< Updated upstream
     display: inline-flex;
+=======
+    display: flex;
+>>>>>>> Stashed changes
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     font-weight: bold;
+<<<<<<< Updated upstream
     line-height: 1;
     flex-shrink: 0;
+=======
+>>>>>>> Stashed changes
 }
 
 .nombre_centro {
@@ -279,7 +424,11 @@ body {
 
 .nombre_centro small {
     color: #72D4D0;
+<<<<<<< Updated upstream
     font-size: 0.58rem;
+=======
+    font-size: 0.55rem;
+>>>>>>> Stashed changes
     letter-spacing: 1.5px;
 }
 
@@ -287,6 +436,7 @@ body {
     color: #B5C8CE;
     font-size: 0.85rem;
     line-height: 1.7;
+<<<<<<< Updated upstream
     max-width: 320px;
 }
 
@@ -297,6 +447,17 @@ body {
     letter-spacing: 1.5px;
     margin-bottom: 1.35rem;
     text-transform: uppercase;
+=======
+    max-width: 300px;
+}
+
+/* COLUMNAS */
+.pie_columna h3 {
+    color: #72D4D0;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+>>>>>>> Stashed changes
 }
 
 .pie_columna ul {
@@ -306,10 +467,16 @@ body {
 }
 
 .pie_columna li {
+<<<<<<< Updated upstream
     margin-bottom: 0.9rem;
     color: #B5C8CE;
     font-size: 0.85rem;
     word-break: break-word;
+=======
+    margin-bottom: 1rem;
+    color: #B5C8CE;
+    font-size: 0.85rem;
+>>>>>>> Stashed changes
 }
 
 .pie_columna a {
@@ -322,12 +489,20 @@ body {
     color: #ffffff;
 }
 
+<<<<<<< Updated upstream
 /* Parte inferior */
+=======
+/* PARTE INFERIOR */
+>>>>>>> Stashed changes
 .pie_inferior {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 1.2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -337,7 +512,11 @@ body {
 .pie_inferior p,
 .enlaces-legales a {
     color: #829CA5;
+<<<<<<< Updated upstream
     font-size: 0.75rem;
+=======
+    font-size: 0.72rem;
+>>>>>>> Stashed changes
 }
 
 .enlaces-legales {
@@ -353,6 +532,7 @@ body {
     color: #ffffff;
 }
 
+<<<<<<< Updated upstream
 /* ====================== RESPONSIVIDAD ====================== */
 @media (max-width: 1024px) {
     .menu-toggle {
@@ -417,10 +597,17 @@ body {
     }
 
     .pie_contenido {
+=======
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+
+    .pie-contenido {
+>>>>>>> Stashed changes
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
+<<<<<<< Updated upstream
     .pie_inferior {
         flex-direction: column;
         text-align: center;
@@ -437,3 +624,20 @@ body {
         gap: 1.75rem;
     }
 }
+=======
+    .pie-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .pie-contenido {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+>>>>>>> Stashed changes
