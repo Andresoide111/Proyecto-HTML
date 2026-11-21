@@ -1,14 +1,14 @@
 :root {
-    --primary_color: #17313B;
-    --btn_main: #0F7772;
-    --btn_principal: #168C86;
-    --bg_color: #F4F5F0;
-    --surface_color: #ffffff;
-    --text_color: #0f172a;
-    --text_muted: #63767C;
-    --color_claro: #e2e8f0;
-    --shadow_sm: 0 1px 3px rgba(62, 45, 45, 0.1);
-    --shadow_md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --primary-color: #17313B;
+    --btn-main: #0F7772;
+    --btn-principal: #168C86;
+    --bg-color: #F4F5F0;
+    --surface-color: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #63767C;
+    --color-claro: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
     --radius: 8px;
 }
 
@@ -18,192 +18,191 @@
 
 body {
     margin: 0;
-    background: var(--bg_color);
-    color: var(--text_color);
+    background: var(--surface-color);
+    color: var(--text-color);
     font-family: "Segoe UI", system-ui, sans-serif;
     line-height: 1.5;
 }
 
-.pagina-especialidades {
-    width: min(1180px, calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 3rem 0;
-}
-
-.encabezado-pagina {
-    margin-bottom: 2rem;
+/* Franja superior de encabezado de sección */
+.hero-especialidades {
+    background: var(--bg-color);
+    padding: 3.5rem 1.5rem 3rem;
     text-align: center;
 }
 
-.encabezado-pagina h1 {
-    margin: 0 0 0.5rem;
-    color: var(--primary_color);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+.hero-especialidades-inner {
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-.encabezado-pagina p {
+.subtitulo-superior {
+    display: inline-block;
+    color: var(--btn-main);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--btn-principal);
+    margin-bottom: 0.85rem;
+}
+
+.hero-especialidades h1 {
+    margin: 0 0 0.65rem;
+    color: var(--primary-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+}
+
+.hero-especialidades p {
     margin: 0;
-    color: var(--text_muted);
+    color: var(--text-muted);
+    font-size: 1rem;
 }
 
-.especialidades-filtros {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 2rem;
-}
-
-.especialidades-filtros input {
-    width: min(100%, 520px);
-    min-height: 48px;
-    padding: 0.7rem 1rem;
-    border: 1px solid #cbd5d8;
-    border-radius: 999px;
-    background: var(--surface_color);
-    color: var(--text_color);
-    font: inherit;
-}
-
-.especialidades-filtros input:focus {
-    outline: 3px solid rgba(22, 140, 134, 0.2);
-    border-color: var(--btn_principal);
+/* Contenedor principal */
+.pagina-especialidades {
+    width: min(1180px, calc(100% - 2.5rem));
+    margin: 0 auto;
+    padding: 3rem 0 4rem;
 }
 
 .especialidades-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .especialidad-card {
     display: flex;
-    min-height: 210px;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
-    border: 1px solid var(--color_claro);
+    padding: 1.75rem;
+    border: 1px solid var(--color-claro);
     border-radius: var(--radius);
-    background: var(--surface_color);
-    box-shadow: var(--shadow_sm);
+    background: var(--surface-color);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .especialidad-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow_md);
+    box-shadow: var(--shadow-md);
+}
+
+.card-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.card-numero {
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 .especialidad-icono {
     display: grid;
     width: 3rem;
     height: 3rem;
-    margin-bottom: 1rem;
     place-items: center;
     border-radius: 50%;
-    background: #e7f4f2;
-    color: var(--btn_main);
-    font-size: 1.3rem;
+    background: #dff2ef;
 }
 
 .especialidad-card h2 {
-    margin: 0 0 0.5rem;
-    color: var(--primary_color);
-    font-size: 1.15rem;
+    margin: 0 0 0.65rem;
+    color: var(--primary-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 1.65rem;
 }
 
-.especialidad-card p {
-    margin: 0 0 1rem;
-    color: var(--text_muted);
+.especialidad-card > p {
+    margin: 0 0 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
-.especialidad-card a {
-    margin-top: auto;
-    color: var(--btn_main);
+.card-divisor {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--color-claro);
+    margin: auto 0 1.15rem;
+}
+
+.servicios-titulo {
+    margin: 0 0 0.75rem;
+    color: var(--primary-color);
+    font-size: 0.75rem;
     font-weight: 700;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    letter-spacing: 0.08em;
 }
 
-/* Etiqueta pequeña superior */
-.tag {
+.lista-servicios {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.lista-servicios li {
+    position: relative;
+    padding-left: 1.35rem;
+    margin-bottom: 0.45rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.lista-servicios li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--btn-principal);
+    font-weight: 700;
+}
+
+.enlace-agendar {
     display: inline-block;
-    background-color: #DFF2EF;
+    margin-top: auto;
     color: var(--btn-main);
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--radius);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    text-decoration: none;
 }
 
-/* Cajas de lista y detalle */
-.bloque-lista,
-.bloque-detalle {
-    background: var(--surface-color);
+.enlace-agendar:hover {
+    color: var(--btn-principal);
+    text-decoration: underline;
+}
+
+/* Bloque de alcance y requisitos (<dl>) */
+.bloque-requisitos {
+    margin-top: 3rem;
+    padding: 1.75rem;
     border: 1px solid var(--color-claro);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    background: var(--bg-color);
 }
 
-.bloque-lista h2,
-.bloque-detalle h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
+.bloque-requisitos h2 {
+    margin: 0 0 1rem;
     color: var(--primary-color);
-    font-size: 1.25rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
-/* Lista desordenada (<ul>) */
-.lista-especialidades {
-    padding-left: 1.25rem;
-    margin: 0;
-}
-
-.lista-especialidades li {
-    background-color: #DFF2EF;
-    color: var(--text-color);
-    padding: 0.65rem 0.9rem;
-    margin-bottom: 0.6rem;
-    border-left: 4px solid var(--btn-principal);
-    border-radius: 4px;
-}
-
-/* Lista de definición (<dl>, <dt>, <dd>) */
-.detalle-especialidades dt {
+.lista-requisitos dt {
     margin-top: 1rem;
-    margin-bottom: 0.35rem;
     color: var(--btn-main);
     font-weight: 700;
-    font-size: 1.05rem;
 }
 
-.detalle-especialidades dd {
-    margin-left: 0;
-    margin-bottom: 0.45rem;
-    padding: 0.55rem 0.85rem;
-    background-color: #FBFCFA;
-    border-left: 3px solid var(--color-claro);
+.lista-requisitos dd {
+    margin: 0.3rem 0 0;
     color: var(--text-muted);
-}
-
-/* Botón inferior */
-.acciones-especialidades {
-    margin-top: 1.25rem;
-}
-
-.btn-agendar {
-    display: inline-block;
-    background-color: var(--btn-principal);
-    color: var(--surface-color);
-    text-decoration: none;
-    padding: 0.65rem 1.2rem;
-    border-radius: var(--radius);
-    font-weight: 700;
-}
-
-.btn-agendar:hover {
-    background-color: var(--btn-main);
+    font-size: 0.95rem;
 }
 
 @media (max-width: 900px) {
@@ -215,15 +214,15 @@ body {
 @media (max-width: 600px) {
     .pagina-especialidades {
         width: min(100% - 1.25rem, 1180px);
-        padding: 2rem 0;
+        padding: 2rem 0 3rem;
     }
 
     .especialidades-grid {
         grid-template-columns: 1fr;
     }
 
-    .bloque-lista,
-    .bloque-detalle {
-        padding: 1rem;
+    .especialidad-card,
+    .bloque-requisitos {
+        padding: 1.25rem;
     }
 }

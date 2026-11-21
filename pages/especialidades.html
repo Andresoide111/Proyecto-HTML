@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <!-- Adapta la vista a pantallas de celular y computadora -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MRV SALUD | Catálogo de Especialidades</title>
+    <!-- Título de la pestaña -->
+    <title>MRV SALUD | Especialidades médicas</title>
     <!-- Estilos compartidos de encabezado y pie de página -->
     <link rel="stylesheet" href="../css/styles_encabezado_pie.css">
     <!-- Estilos propios de la página de especialidades -->
@@ -37,7 +38,7 @@
                 <img src="../assets/img/logo-centromedico.svg" alt="Logo Centro Médico MRV Salud" class="logo-hospital" height="50">
             </a>
 
-            <!-- Menú principall -->
+            <!-- Menú principal -->
             <nav class="nav-principal">
                 <a href="../index.html">Inicio</a>
                 <a href="../pages/especialidades.html">Especialidades</a>
@@ -65,64 +66,172 @@
     <!-- Contenido principal -->
     <main>
 
+        <!-- Encabezado superior estilo maqueta -->
+        <section class="hero-especialidades">
+            <div class="hero-especialidades-inner">
+                <span class="subtitulo-superior">NUESTRA ATENCIÓN</span>
+                <h1>Especialidades médicas</h1>
+                <p>Cuidado experto y coordinado, diseñado alrededor de las necesidades de cada paciente.</p>
+            </div>
+        </section>
+
         <!-- Contenedor principal de especialidades -->
         <section class="pagina-especialidades">
 
-            <!-- Encabezado de la sección -->
-            <div class="encabezado-pagina">
-                <span class="tag">CATÁLOGO DE ESPECIALIDADES</span>
-                <h1>Servicios y áreas de atención</h1>
-                <p>Desglose de especialidades médicas, alcance de atención y requisitos para los pacientes.</p>
+            <!-- Cuadrícula de especialidades -->
+            <div class="especialidades-grid">
+
+                <!-- 01 Cardiología -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">01</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/calendario.svg" alt="Icono Cardiología" class="icono">
+                        </span>
+                    </div>
+                    <h2>Cardiología</h2>
+                    <p>Prevención, diagnóstico y tratamiento integral de enfermedades cardiovasculares.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Electrocardiograma</li>
+                        <li>Evaluación de riesgo</li>
+                        <li>Control de hipertensión</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Cardiología &rarr;</a>
+                </article>
+
+                <!-- 02 Pediatría -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">02</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/usuario.svg" alt="Icono Pediatría" class="icono">
+                        </span>
+                    </div>
+                    <h2>Pediatría</h2>
+                    <p>Atención cálida y especializada para acompañar cada etapa del crecimiento.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Control del niño sano</li>
+                        <li>Vacunación</li>
+                        <li>Nutrición infantil</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Pediatría &rarr;</a>
+                </article>
+
+                <!-- 03 Neurología -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">03</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/horario.svg" alt="Icono Neurología" class="icono">
+                        </span>
+                    </div>
+                    <h2>Neurología</h2>
+                    <p>Evaluación clínica avanzada del sistema nervioso central y periférico.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Cefaleas</li>
+                        <li>Trastornos del sueño</li>
+                        <li>Evaluación neurológica</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Neurología &rarr;</a>
+                </article>
+
+                <!-- 04 Ortopedia -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">04</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/calendario.svg" alt="Icono Ortopedia" class="icono">
+                        </span>
+                    </div>
+                    <h2>Ortopedia</h2>
+                    <p>Recuperación de la movilidad con diagnóstico y tratamiento musculoesquelético.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Lesiones deportivas</li>
+                        <li>Dolor articular</li>
+                        <li>Rehabilitación</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Ortopedia &rarr;</a>
+                </article>
+
+                <!-- 05 Oftalmología -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">05</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/usuario.svg" alt="Icono Oftalmología" class="icono">
+                        </span>
+                    </div>
+                    <h2>Oftalmología</h2>
+                    <p>Cuidado de la visión con tecnología diagnóstica de alta precisión.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Examen visual</li>
+                        <li>Control de glaucoma</li>
+                        <li>Salud ocular</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Oftalmología &rarr;</a>
+                </article>
+
+                <!-- 06 Medicina interna -->
+                <article class="especialidad-card">
+                    <div class="card-cabecera">
+                        <span class="card-numero">06</span>
+                        <span class="especialidad-icono">
+                            <img src="../assets/img/horario.svg" alt="Icono Medicina interna" class="icono">
+                        </span>
+                    </div>
+                    <h2>Medicina interna</h2>
+                    <p>Atención integral del adulto y seguimiento de condiciones crónicas.</p>
+                    <hr class="card-divisor">
+                    <h3 class="servicios-titulo">SERVICIOS PRINCIPALES</h3>
+                    <ul class="lista-servicios">
+                        <li>Chequeo general</li>
+                        <li>Diabetes</li>
+                        <li>Medicina preventiva</li>
+                    </ul>
+                    <a class="enlace-agendar" href="../pages/agendar_cita.html">Agendar en Medicina interna &rarr;</a>
+                </article>
+
             </div>
 
-            <!-- Lista desordenada con las áreas de atención -->
-            <div class="bloque-lista">
-                <h2>Áreas de atención</h2>
-                <ul class="lista-especialidades">
-                    <li>Medicina General</li>
-                    <li>Pediatría</li>
-                    <li>Odontología</li>
-                    <li>Ginecología</li>
-                    <li>Cardiología</li>
-                </ul>
-            </div>
-
-            <!-- Lista de definición con alcance y requisitos por especialidad -->
-            <div class="bloque-detalle">
+            <!-- Desglose de alcance y requisitos con lista de definición -->
+            <section class="bloque-requisitos">
                 <h2>Alcance y requisitos por especialidad</h2>
+                <dl class="lista-requisitos">
+                    <dt>Cardiología</dt>
+                    <dd><strong>Alcance:</strong> Evaluación cardiovascular, control de presión arterial y seguimiento de factores de riesgo cardíaco.</dd>
+                    <dd><strong>Requisitos:</strong> Llegar 30 minutos antes para toma de signos vitales y traer resultados previos si los tiene.</dd>
 
-                <dl class="detalle-especialidades">
-                    <!-- Especialidad 1 -->
-                    <dt>Medicina General</dt>
-                    <dd><strong>Alcance:</strong> Diagnóstico inicial, tratamiento de enfermedades comunes, control preventivo y referencia médica.</dd>
-                    <dd><strong>Requisitos:</strong> Presentar documento de identidad y llegar 15 minutos antes de la cita.</dd>
-
-                    <!-- Especialidad 2 -->
                     <dt>Pediatría</dt>
                     <dd><strong>Alcance:</strong> Control de crecimiento y desarrollo, atención de cuadros febriles o respiratorios y seguimiento infantil.</dd>
                     <dd><strong>Requisitos:</strong> Presentar carnet de vacunación actualizado y partida de nacimiento o identificación del responsable.</dd>
 
-                    <!-- Especialidad 3 -->
-                    <dt>Odontología</dt>
-                    <dd><strong>Alcance:</strong> Evaluación bucal, limpiezas dentales, obturaciones, extracciones simples y prevención oral.</dd>
-                    <dd><strong>Requisitos:</strong> Contar con cita programada y asistir con higiene bucal previa.</dd>
+                    <dt>Neurología</dt>
+                    <dd><strong>Alcance:</strong> Diagnóstico y manejo de cefaleas, trastornos del sueño y alteraciones neurológicas.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar documento de identidad y traer estudios o recetas previas si cuenta con ellos.</dd>
 
-                    <!-- Especialidad 4 -->
-                    <dt>Ginecología</dt>
-                    <dd><strong>Alcance:</strong> Chequeos ginecológicos preventivos, orientación en salud femenina y seguimiento clínico.</dd>
-                    <dd><strong>Requisitos:</strong> Presentar identificación y traer exámenes o controles médicos anteriores si aplica.</dd>
+                    <dt>Ortopedia</dt>
+                    <dd><strong>Alcance:</strong> Diagnóstico y tratamiento de lesiones deportivas, dolor articular y procesos de rehabilitación.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar identificación y traer radiografías o exámenes recientes si aplica.</dd>
 
-                    <!-- Especialidad 5 -->
-                    <dt>Cardiología</dt>
-                    <dd><strong>Alcance:</strong> Evaluación cardiovascular, control de presión arterial y seguimiento de factores de riesgo cardíaco.</dd>
-                    <dd><strong>Requisitos:</strong> Llegar 30 minutos antes para toma de signos vitales y traer resultados previos si los tiene.</dd>
+                    <dt>Oftalmología</dt>
+                    <dd><strong>Alcance:</strong> Evaluación visual completa, control de glaucoma y prevención de enfermedades oculares.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar identificación y traer lentes actuales o controles previos si los utiliza.</dd>
+
+                    <dt>Medicina interna</dt>
+                    <dd><strong>Alcance:</strong> Atención integral del adulto, chequeos preventivos y seguimiento de enfermedades crónicas.</dd>
+                    <dd><strong>Requisitos:</strong> Presentar documento de identidad y traer historial médico o resultados de laboratorio recientes.</dd>
                 </dl>
-
-                <!-- Botón hacia agendamiento -->
-                <div class="acciones-especialidades">
-                    <a class="btn-agendar" href="../pages/agendar_cita.html">Agendar una cita</a>
-                </div>
-            </div>
+            </section>
 
         </section>
 
