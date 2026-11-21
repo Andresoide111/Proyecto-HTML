@@ -1,19 +1,52 @@
-/* ---------------------- ENCABEZADO ---------------------- */
+:root {
+    --primary-color: #17313B;       /* Texto Principal */
+    --btn-main: #0F7772;            /* Botones hover */
+    --btn-principal: #168C86;       /* Botón principal */
+    --bg-color: #F4F5F0;            /* Fondo Principal */
+    --surface-color: #ffffff;       /* Tarjetas/formularios */
+    --text-color: #0f172a;          /* Texto Principal */
+    --text-muted: #63767C;          /* Texto Secundario */
+    --color-claro: #e2e8f0;         /* Bordes */
+    --pie-color: #0B3040;           /* Fondo pie de página */
+
+    --shadow-sm: 0 1px 3px rgba(62, 45, 45, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 8px;                  /* Bordes redondeados estándar */
+}
+
+/* Selector universal corregido */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* ====================== ENCABEZADO ====================== */
 .site-header {
     width: 100%;
-    background-color: var(--surface_color);
-    box-shadow: var(--shadow_sm);
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-/* Panel superior oscuro */
 .panel_anuncio {
-    background-color: var(--primary_color);
+    background-color: var(--primary-color);
     color: #ffffff;
-    font-size: 0.78rem;
-    padding: 0.45rem 1.5rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .panel_anuncio_inner {
@@ -23,29 +56,30 @@
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.65rem;
 }
 
-.panel_anuncio a,
-.panel_anuncio span {
+.panel_anuncio a {
     color: #ffffff;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.35rem;
+    transition: opacity 0.2s ease;
 }
 
 .panel_anuncio a:hover {
+    opacity: 0.85;
     text-decoration: underline;
 }
 
 .panel_anuncio .separador {
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
-.panel_anuncio .icono {
-    width: 13px;
-    height: 13px;
+.panel_anuncio .icono-top {
+    width: 14px;
+    height: 14px;
     filter: brightness(0) invert(1);
     flex-shrink: 0;
 }
@@ -54,15 +88,16 @@
 .encabezado {
     max-width: 1480px;
     margin: 0 auto;
-    background-color: var(--surface_color);
+    background-color: var(--surface-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    padding: 0.85rem 1.5rem;
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid var(--color-claro);
+    position: relative;
 }
 
-/* Logo */
 .logo-centromedico {
     display: inline-flex;
     align-items: center;
@@ -71,130 +106,104 @@
 }
 
 .logo-hospital {
-    height: 44px;
+    height: 50px;
     width: auto;
     display: block;
-    transition: transform 0.25s ease;
+    transition: transform 0.3s ease;
 }
 
 .logo-hospital:hover {
     transform: scale(1.02);
 }
 
-/* Navegación principal */
+/* Menú de navegación */
 .nav-principal {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.5rem;
 }
 
 .nav-principal a {
-    position: relative;
-    color: var(--text_muted);
+    color: var(--text-color);
     font-weight: 500;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    padding: 0.35rem 0;
     white-space: nowrap;
     transition: color 0.2s ease;
 }
 
-.nav-principal a:hover,
-.nav-principal a.activo {
-    color: var(--btn_principal);
-    font-weight: 600;
-}
-
-/* Línea inferior en enlace activo o hover */
-.nav-principal a.activo::after,
-.nav-principal a:hover::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--btn_principal);
-    border-radius: 2px;
+.nav-principal a:hover {
+    color: var(--btn-principal);
 }
 
 /* Acciones de usuario */
 .acciones-usuario {
     display: flex;
     align-items: center;
-    gap: 1.15rem;
+    gap: 1rem;
     flex-shrink: 0;
 }
 
-.login-link {
-    text-decoration: none;
-    color: var(--primary_color);
+.btn-agendar {
+    background-color: var(--btn-principal);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: opacity 0.2s ease;
-}
-
-.login-link:hover {
-    opacity: 0.8;
-}
-
-.icono-usuario {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-}
-
-.login-texto {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
-}
-
-.login-texto small {
-    font-size: 0.62rem;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    color: var(--text_muted);
-    text-transform: uppercase;
-}
-
-.login-texto strong {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--primary_color);
-    white-space: nowrap;
-}
-
-/* Botón Agendar cita */
-.btn-agendar-header {
-    background-color: var(--btn_principal);
+    justify-content: center;
+    gap: 0.5rem;
     color: #ffffff;
+    border: none;
+    text-align: center;
     text-decoration: none;
-    padding: 0.65rem 1.15rem;
-    border-radius: 6px;
-    font-size: 0.88rem;
+    padding: 10px 18px;
+    font-size: 0.9rem;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
+    border-radius: 6px;
+    cursor: pointer;
     white-space: nowrap;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn-agendar-header:hover {
-    background-color: var(--btn_main);
-    transform: translateY(-1px);
+.btn-agendar:hover {
+    background-color: var(--btn-main);
+    transform: translateY(-2px);
 }
 
-.icono-calendario {
+.btn-agendar .icono-btn {
     width: 16px;
     height: 16px;
     filter: brightness(0) invert(1);
     flex-shrink: 0;
 }
 
-/* Botón menú hamburguesa (oculto en escritorio) */
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+    color: var(--btn-principal);
+}
+
+.btn-login .icono-login {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.btn-login:hover .icono-login {
+    transform: scale(1.08);
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -203,7 +212,7 @@
     width: 38px;
     height: 38px;
     background: transparent;
-    border: 1px solid var(--color_claro);
+    border: 1px solid var(--color-claro);
     border-radius: 6px;
     cursor: pointer;
     padding: 0 8px;
@@ -213,26 +222,139 @@
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--primary_color);
+    background-color: var(--primary-color);
     border-radius: 2px;
-    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* ==========================================================================
-   RESPONSIVIDAD DEL ENCABEZADO
-   ========================================================================== */
-
-@media (max-width: 1120px) {
-    .nav-principal {
-        gap: 1.15rem;
-    }
-
-    .nav-principal a {
-        font-size: 0.88rem;
-    }
+/* ====================== PIE DE PÁGINA ====================== */
+.pie_pagina {
+    background-color: var(--pie-color);
+    color: #ffffff;
+    padding: 3rem 1.5rem 1.2rem;
 }
 
-@media (max-width: 992px) {
+.pie_contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.logo_pie {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+}
+
+.icono_logo {
+    width: 45px;
+    height: 45px;
+    background-color: #159B94;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.nombre_centro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.nombre_centro strong {
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.nombre_centro small {
+    color: #72D4D0;
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
+}
+
+.pie_identidad p {
+    color: #B5C8CE;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+/* Columnas */
+.pie_columna h3 {
+    color: #72D4D0;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.35rem;
+    text-transform: uppercase;
+}
+
+.pie_columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pie_columna li {
+    margin-bottom: 0.9rem;
+    color: #B5C8CE;
+    font-size: 0.85rem;
+    word-break: break-word;
+}
+
+.pie_columna a {
+    color: #B5C8CE;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pie_columna a:hover {
+    color: #ffffff;
+}
+
+/* Parte inferior */
+.pie_inferior {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pie_inferior p,
+.enlaces-legales a {
+    color: #829CA5;
+    font-size: 0.75rem;
+}
+
+.enlaces-legales {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.enlaces-legales a {
+    text-decoration: none;
+}
+
+.enlaces-legales a:hover {
+    color: #ffffff;
+}
+
+/* ====================== RESPONSIVIDAD ====================== */
+@media (max-width: 1024px) {
     .menu-toggle {
         display: flex;
     }
@@ -243,13 +365,13 @@
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--surface_color);
+        background-color: var(--surface-color);
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 0.75rem;
         padding: 1rem 1.5rem 1.25rem;
-        border-bottom: 1px solid var(--color_claro);
-        box-shadow: var(--shadow_md);
+        border-bottom: 1px solid var(--color-claro);
+        box-shadow: var(--shadow-md);
     }
 
     .nav-principal.abierto {
@@ -258,25 +380,18 @@
 
     .nav-principal a {
         width: 100%;
-        padding: 0.55rem 0;
-        font-size: 0.95rem;
-    }
-
-    .nav-principal a.activo::after,
-    .nav-principal a:hover::after {
-        display: none;
+        padding: 0.4rem 0;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .panel_anuncio {
         padding: 0.45rem 0.75rem;
-        font-size: 0.72rem;
+        font-size: 0.74rem;
     }
 
     .panel_anuncio_inner {
         justify-content: center;
-        gap: 0.35rem 0.75rem;
     }
 
     .panel_anuncio .separador {
@@ -284,34 +399,41 @@
     }
 
     .encabezado {
-        padding: 0.75rem;
-        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        gap: 0.6rem;
     }
 
     .logo-hospital {
-        height: 36px;
+        height: 40px;
     }
 
-    .login-texto small {
-        display: none;
-    }
-
-    .login-texto strong {
+    .btn-agendar {
+        padding: 8px 12px;
         font-size: 0.82rem;
     }
 
-    .btn-agendar-header {
-        padding: 0.55rem 0.85rem;
+    .btn-login {
         font-size: 0.82rem;
     }
 
-    .acciones-usuario {
-        gap: 0.65rem;
+    .pie_contenido {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .pie_inferior {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
-@media (max-width: 420px) {
-    .login-link span:last-child strong {
+@media (max-width: 480px) {
+    .btn-login span {
         display: none; /* Deja solo el ícono de usuario en pantallas muy angostas */
+    }
+
+    .pie_contenido {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
     }
 }
