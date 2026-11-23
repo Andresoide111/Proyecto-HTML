@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MRV SALUD | Crear Cuenta</title>
+    <title>Crear Cuenta | MRV SALUD</title>
     <link rel="stylesheet" href="../css/styles_login_registro.css">
 </head>
 
@@ -44,7 +44,8 @@
                     <!-- Pestañas superiores -->
                     <div class="auth-tabs" role="tablist">
                         <a href="login.html" class="tab-item" role="tab" aria-selected="false">Iniciar sesión</a>
-                        <a href="registrar.html" class="tab-item active" role="tab" aria-selected="true">Crear cuenta</a>
+                        <a href="registrar.html" class="tab-item active" role="tab" aria-selected="true">Crear
+                            cuenta</a>
                     </div>
 
                     <!-- Encabezado del formulario -->
@@ -61,7 +62,7 @@
                         <div class="columna-form">
                             <div class="campo-grupo">
                                 <label for="nombre">NOMBRE</label>
-                                <input type="text" id="nombre" name="nombre" required autocomplete="given-name"
+                                <input type="text" id="nombre" name="nombre completo" required autocomplete="given-name"
                                     placeholder="Tu nombre">
                             </div>
 
@@ -106,8 +107,8 @@
 
                             <div class="campo-grupo">
                                 <label for="confirm_password">CONFIRMAR CONTRASEÑA</label>
-                                <input type="password" id="confirm_password" name="confirm_password" required minlength="8"
-                                    autocomplete="new-password" placeholder="Confirma tu contraseña">
+                                <input type="password" id="confirm_password" name="confirm_password" required
+                                    minlength="8" autocomplete="new-password" placeholder="Confirma tu contraseña">
                             </div>
                         </div>
 
@@ -116,7 +117,11 @@
                             <div class="form-opciones">
                                 <label class="checkbox-label">
                                     <input type="checkbox" name="terms" id="terms" required>
-                                    <span>Acepto los términos y condiciones</span>
+                                    <p>Acepto los
+                                        <a href="terminos_y_condiciones.html" class="forgot-password" target="_blank" rel="noopener noreferrer">
+                                        términos y condiciones</a>
+                                    </p>
+
                                 </label>
                             </div>
 
