@@ -29,7 +29,7 @@ body {
 
 /* Limita el ancho en pantallas muy grandes (monitores 2K/4K) */
 main {
-    max-width: 1480px;
+    max-width: auto;
     margin: 0;
 }
 
@@ -40,8 +40,8 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 3rem 2.5rem;
-    background-color: var(--surface_color);
     margin: 1.5rem;
+    background-color: var(--surface_color);
     border-radius: var(--radius);
     box-shadow: var(--shadow_md);
 }
