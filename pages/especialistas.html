@@ -341,6 +341,27 @@
                 </div>
             </div>
         </section>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botonesFiltro = document.querySelectorAll(".filtro-btn");
+            const tarjetas = document.querySelectorAll(".especialista-card");
+
+            botonesFiltro.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    botonesFiltro.forEach(function (b) { b.classList.remove("activo"); });
+                    boton.classList.add("activo");
+
+                    const especialidadSeleccionada = boton.dataset.especialidad;
+
+                    tarjetas.forEach(function (tarjeta) {
+                        const especialidadTarjeta = tarjeta.dataset.especialidad;
+                        const mostrar = especialidadSeleccionada === "todas" || especialidadTarjeta === especialidadSeleccionada;
+                        tarjeta.style.display = mostrar ? "" : "none";
+                    });
+                });
+            });
+        });
+    </script>
 
     </main>
 
