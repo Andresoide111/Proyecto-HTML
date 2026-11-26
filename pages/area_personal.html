@@ -14,7 +14,7 @@
         <header class="perfil-hero">
             <div class="perfil-contenedor">
                 <span class="perfil-hero__etiqueta">ÁREA PERSONAL</span>
-                <h1 class="perfil-hero__titulo" id="tituloSaludo">Hola, María</h1>
+                <h1 class="perfil-hero__titulo" id="tituloSaludo">Hola, User</h1>
                 <p class="perfil-hero__subtitulo">
                     Gestiona tus datos y revisa el seguimiento de tus citas médicas.
                 </p>
@@ -28,31 +28,31 @@
                 <!-- Columna izquierda: Tarjeta de usuario y menú -->
                 <aside class="perfil-sidebar">
                     <div class="tarjeta-usuario">
-                        <div class="avatar-circulo" id="avatarIniciales">ML</div>
-                        <h2 class="usuario-nombre" id="nombreSidebar">María López</h2>
-                        <span class="usuario-handle" id="usuarioHandle">@marialopez</span>
+                        <div class="avatar-circulo" id="avatarIniciales">U</div>
+                        <h2 class="usuario-nombre" id="nombreSidebar">User</h2>
+                        <span class="usuario-handle" id="usuarioHandle">@User</span>
                     </div>
 
                     <nav class="menu-perfil" aria-label="Secciones del perfil">
                         <button type="button" class="menu-perfil__item activo" data-seccion="resumen">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#9783;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Resumen</span>
                         </button>
 
                         <button type="button" class="menu-perfil__item" data-seccion="editar">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#9998;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Editar perfil</span>
                         </button>
 
                         <button type="button" class="menu-perfil__item" data-seccion="historial">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#128197;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Historial de citas</span>
                         </button>
 
                         <hr class="menu-perfil__separador">
                         <!-- Boton de cerrar sesion que manda a la pagina de inicio -->
                         <button type="button" class="menu-perfil__item menu-perfil__item--salir" id="btnCerrarSesion" onclick="window.location.href='../index.html'">
-                            <span class="menu-perfil__icono" aria-hidden="true">&#8594;</span>
+                            <span class="menu-perfil__icono" aria-hidden="true"></span>
                             <span>Cerrar sesión</span>
                         </button>
                     </nav>
@@ -85,7 +85,7 @@
                                 <p class="seccion-subtitulo">Datos asociados a tu cuenta.</p>
                             </div>
                             <button type="button" class="enlace-editar" id="btnEditarRapido">
-                                <span aria-hidden="true">&#9998;</span>
+                                <span aria-hidden="true"></span>
                                 <span>Editar</span>
                             </button>
                         </div>
@@ -93,27 +93,27 @@
                         <div class="tabla-datos-personales">
                             <div class="dato-celda">
                                 <span class="dato-etiqueta">NOMBRE COMPLETO</span>
-                                <span class="dato-valor" id="datoNombreCompleto">María López</span>
+                                <span class="dato-valor" id="datoNombreCompleto">User 123</span>
                             </div>
 
                             <div class="dato-celda">
                                 <span class="dato-etiqueta">FECHA DE NACIMIENTO</span>
-                                <span class="dato-valor" id="datoNacimiento">1995-04-18</span>
+                                <span class="dato-valor" id="datoNacimiento">0000-00-00</span>
                             </div>
 
                             <div class="dato-celda">
                                 <span class="dato-etiqueta">USUARIO</span>
-                                <span class="dato-valor" id="datoUsuario">@marialopez</span>
+                                <span class="dato-valor" id="datoUsuario">@user</span>
                             </div>
 
                             <div class="dato-celda">
                                 <span class="dato-etiqueta">CORREO</span>
-                                <span class="dato-valor" id="datoCorreo">maria.lopez@correo.com</span>
+                                <span class="dato-valor" id="datoCorreo">user.123@correo.com</span>
                             </div>
 
                             <div class="dato-celda dato-celda--full">
                                 <span class="dato-etiqueta">TELÉFONO</span>
-                                <span class="dato-valor" id="datoTelefono">98765432</span>
+                                <span class="dato-valor" id="datoTelefono">99999999</span>
                             </div>
                         </div>
                     </section>
@@ -183,116 +183,6 @@
 
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const usuario = {
-                nombre: "María",
-                apellido: "López",
-                nacimiento: "1995-04-18",
-                usuario: "@marialopez",
-                correo: "maria.lopez@correo.com",
-                telefono: "98765432"
-            };
 
-            const botonesMenu = document.querySelectorAll(".menu-perfil__item[data-seccion]");
-            const secciones = {
-                resumen: document.getElementById("seccionResumen"),
-                editar: document.getElementById("seccionEditar"),
-                historial: document.getElementById("seccionHistorial")
-            };
-
-            const mensajePerfil = document.getElementById("mensajePerfil");
-            const btnEditarRapido = document.getElementById("btnEditarRapido");
-            const btnCancelarEdicion = document.getElementById("btnCancelarEdicion");
-            const formEditarPerfil = document.getElementById("formEditarPerfil");
-            const btnCerrarSesion = document.getElementById("btnCerrarSesion");
-
-            function renderizarUsuario() {
-                const nombreCompleto = `${usuario.nombre} ${usuario.apellido}`.trim();
-                const ini1 = (usuario.nombre[0] || "").toUpperCase();
-                const ini2 = (usuario.apellido[0] || usuario.nombre[1] || "").toUpperCase();
-
-                document.getElementById("tituloSaludo").textContent = `Hola, ${usuario.nombre}`;
-                document.getElementById("avatarIniciales").textContent = ini1 + ini2;
-                document.getElementById("nombreSidebar").textContent = nombreCompleto;
-                document.getElementById("usuarioHandle").textContent = usuario.usuario;
-
-                document.getElementById("datoNombreCompleto").textContent = nombreCompleto;
-                document.getElementById("datoNacimiento").textContent = usuario.nacimiento;
-                document.getElementById("datoUsuario").textContent = usuario.usuario;
-                document.getElementById("datoCorreo").textContent = usuario.correo;
-                document.getElementById("datoTelefono").textContent = usuario.telefono;
-
-                document.getElementById("inputNombre").value = usuario.nombre;
-                document.getElementById("inputApellido").value = usuario.apellido;
-                document.getElementById("inputNacimiento").value = usuario.nacimiento;
-                document.getElementById("inputTelefono").value = usuario.telefono;
-                document.getElementById("inputCorreo").value = usuario.correo;
-            }
-
-            function cambiarSeccion(nombreSeccion) {
-                Object.keys(secciones).forEach(function (clave) {
-                    secciones[clave].hidden = clave !== nombreSeccion;
-                });
-
-                botonesMenu.forEach(function (btn) {
-                    btn.classList.toggle("activo", btn.dataset.seccion === nombreSeccion);
-                });
-            }
-
-            function mostrarMensaje(texto, esError) {
-                mensajePerfil.hidden = false;
-                mensajePerfil.textContent = texto;
-                mensajePerfil.className = esError
-                    ? "mensaje-estado mensaje-error"
-                    : "mensaje-estado mensaje-exito";
-            }
-
-            botonesMenu.forEach(function (btn) {
-                btn.addEventListener("click", function () {
-                    mensajePerfil.hidden = true;
-                    cambiarSeccion(btn.dataset.seccion);
-                });
-            });
-
-            btnEditarRapido.addEventListener("click", function () {
-                mensajePerfil.hidden = true;
-                cambiarSeccion("editar");
-            });
-
-            btnCancelarEdicion.addEventListener("click", function () {
-                mensajePerfil.hidden = true;
-                renderizarUsuario();
-                cambiarSeccion("resumen");
-            });
-
-            formEditarPerfil.addEventListener("submit", function (e) {
-                e.preventDefault();
-
-                const nuevoNombre = document.getElementById("inputNombre").value.trim();
-                const nuevoApellido = document.getElementById("inputApellido").value.trim();
-                const nuevoNacimiento = document.getElementById("inputNacimiento").value.trim();
-                const nuevoTelefono = document.getElementById("inputTelefono").value.trim();
-                const nuevoCorreo = document.getElementById("inputCorreo").value.trim();
-
-                if (!nuevoNombre || !nuevoApellido || !nuevoCorreo) {
-                    mostrarMensaje("Nombre, apellido y correo son obligatorios.", true);
-                    return;
-                }
-
-                usuario.nombre = nuevoNombre;
-                usuario.apellido = nuevoApellido;
-                usuario.nacimiento = nuevoNacimiento;
-                usuario.telefono = nuevoTelefono;
-                usuario.correo = nuevoCorreo;
-
-                renderizarUsuario();
-                cambiarSeccion("resumen");
-                mostrarMensaje("Información personal actualizada correctamente en la maqueta.", false);
-            });
-
-            renderizarUsuario();
-        });
-    </script>
 </body>
 </html>
