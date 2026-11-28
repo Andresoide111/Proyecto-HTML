@@ -22,7 +22,6 @@ body {
     color: var(--text-color);
     font-family: "Segoe UI", system-ui, sans-serif;
     line-height: 1.5;
-    margin: 1.5rem;
 }
 
 /* Franja superior de encabezado de sección */
@@ -67,6 +66,7 @@ body {
 .pagina-especialidades {
     background-color: var(--surface-color);
     padding: 3rem 1.5rem 2.5rem;
+    margin: 1.5rem;
 }
 
 .especialidades-grid {
